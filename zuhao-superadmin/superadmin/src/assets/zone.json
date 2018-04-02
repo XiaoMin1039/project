@@ -1,0 +1,497 @@
+﻿[
+  {
+    "children": [{ "children": [{ "label": "所有子区", "value": 0 }], "label": "所有大区", "value": 0 }],
+    "label": "所有游戏",
+    "value": 0
+  },
+  {
+    "children": [
+      { "children": [{ "label": "电信", "value": 100101 }], "label": "电信", "value": 100100 },
+      { "children": [{ "label": "网通", "value": 100201 }], "label": "网通", "value": 100200 },
+      { "children": [{ "label": "电信二", "value": 100301 }], "label": "电信二", "value": 100300 }
+    ],
+    "label": "QQ飞车",
+    "value": 10000000
+  },
+  {
+    "children": [
+      {
+        "children": [
+          { "label": "华中2区", "value": 200101 },
+          { "label": "西南1区 ", "value": 200102 },
+          { "label": "邂逅南国", "value": 200103 },
+          { "label": "华南之约", "value": 200104 },
+          { "label": "乐动天音", "value": 200105 },
+          { "label": "须臾以南", "value": 200106 },
+          { "label": "华东3区", "value": 200107 },
+          { "label": "浮生未歇", "value": 200108 },
+          { "label": "烟雨江南", "value": 200109 },
+          { "label": "华东1区", "value": 200110 },
+          { "label": "西南2区", "value": 200111 },
+          { "label": "华中1区", "value": 200112 },
+          { "label": "华南1区", "value": 200113 },
+          { "label": "鹊舞江南", "value": 200114 },
+          { "label": "浪漫惊喜", "value": 200115 },
+          { "label": "华东情缘", "value": 200116 },
+          { "label": "红豆南国", "value": 200117 },
+          { "label": "华南2区", "value": 200118 },
+          { "label": "西北1区", "value": 200119 },
+          { "label": "广东专区", "value": 200120 },
+          { "label": "舞动奇迹", "value": 200121 },
+          { "label": "执子之手", "value": 200122 },
+          { "label": "华东之恋", "value": 200123 },
+          { "label": "浪漫之约", "value": 200124 },
+          { "label": "华东4区", "value": 200125 },
+          { "label": "华东2区", "value": 200126 },
+          { "label": "一米阳光", "value": 200127 },
+          { "label": "三生三世 ", "value": 200128 }
+        ],
+        "label": "电信区",
+        "value": 200100
+      },
+      {
+        "children": [
+          { "label": "华北3区", "value": 200201 },
+          { "label": "北城之恋", "value": 200202 },
+          { "label": "乐动天音", "value": 200203 },
+          { "label": "雪瑞北国", "value": 200204 },
+          { "label": "华北1区", "value": 200205 },
+          { "label": "陌上花开", "value": 200206 },
+          { "label": "东北1区", "value": 200207 },
+          { "label": "甜蜜派对", "value": 200208 },
+          { "label": "与子偕老", "value": 200209 },
+          { "label": "彼岸流年", "value": 200210 },
+          { "label": "华北2区", "value": 200211 },
+          { "label": "光年以北", "value": 200212 },
+          { "label": "东北2区", "value": 200213 },
+          { "label": "北国恋歌", "value": 200214 },
+          { "label": "蝶恋北风", "value": 200215 },
+          { "label": "华北天地", "value": 200216 },
+          { "label": "七夕之恋", "value": 200217 }
+        ],
+        "label": "网通区",
+        "value": 200200
+      }
+    ],
+    "label": "QQ炫舞",
+    "value": 20000000
+  },
+  {
+    "children": [
+      {
+        "children": [
+          { "label": "安徽一区", "value": 300101 },
+          { "label": "福建一区", "value": 300102 },
+          { "label": "广东一区", "value": 300103 },
+          { "label": "广东二区", "value": 300104 },
+          { "label": "广东三区", "value": 300105 },
+          { "label": "广东四区", "value": 300106 },
+          { "label": "广西一区", "value": 300107 },
+          { "label": "湖北一区", "value": 300108 },
+          { "label": "湖北二区", "value": 300109 },
+          { "label": "湖南一区", "value": 300110 },
+          { "label": "湖南二区", "value": 300111 },
+          { "label": "江苏一区", "value": 300112 },
+          { "label": "江苏二区", "value": 300113 },
+          { "label": "江西一区", "value": 300114 },
+          { "label": "南方大区", "value": 300115 },
+          { "label": "陕西一区", "value": 300116 },
+          { "label": "上海一区", "value": 300117 },
+          { "label": "上海二区", "value": 300118 },
+          { "label": "四川一区", "value": 300119 },
+          { "label": "四川二区", "value": 300120 },
+          { "label": "云南一区", "value": 300121 },
+          { "label": "浙江一区", "value": 300122 },
+          { "label": "浙江二区", "value": 300123 },
+          { "label": "重庆一区", "value": 300124 }
+        ],
+        "label": "电信区",
+        "value": 300100
+      },
+      {
+        "children": [
+          { "label": "北方大区", "value": 300201 },
+          { "label": "北京一区", "value": 300202 },
+          { "label": "北京二区", "value": 300203 },
+          { "label": "北京三区", "value": 300204 },
+          { "label": "北京四区", "value": 300205 },
+          { "label": "河北一区", "value": 300206 },
+          { "label": "河南一区", "value": 300207 },
+          { "label": "河南二区", "value": 300208 },
+          { "label": "黑龙江区", "value": 300209 },
+          { "label": "吉林一区", "value": 300210 },
+          { "label": "辽宁一区", "value": 300211 },
+          { "label": "辽宁二区", "value": 300212 },
+          { "label": "辽宁三区", "value": 300213 },
+          { "label": "山东一区", "value": 300214 },
+          { "label": "山东二区", "value": 300215 },
+          { "label": "山西一区", "value": 300216 }
+        ],
+        "label": "网通区",
+        "value": 300200
+      },
+      {
+        "children": [{ "label": "教育网专区", "value": 300301 }, { "label": "移动专区", "value": 300302 }],
+        "label": "其他大区",
+        "value": 300300
+      }
+    ],
+    "label": "穿越火线",
+    "value": 30000000
+  },
+  {
+    "children": [
+      {
+        "children": [
+          { "label": "广东1区", "value": 400101 },
+          { "label": "广东2区", "value": 400102 },
+          { "label": "广东3区", "value": 400103 },
+          { "label": "广东4区", "value": 400104 },
+          { "label": "广东5区", "value": 400105 },
+          { "label": "广东6区", "value": 400106 },
+          { "label": "广东7区", "value": 400107 },
+          { "label": "广东8区", "value": 400108 },
+          { "label": "广东9区", "value": 400109 },
+          { "label": "广东10区", "value": 400110 },
+          { "label": "广东11区", "value": 400111 },
+          { "label": "广东12区", "value": 400112 },
+          { "label": "广东13区", "value": 400113 },
+          { "label": "广东1/2区", "value": 400114 }
+        ],
+        "label": "广东区",
+        "value": 400100
+      },
+      {
+        "children": [
+          { "label": "北京1区", "value": 400201 },
+          { "label": "北京2/4区", "value": 400202 },
+          { "label": "北京3区", "value": 400203 }
+        ],
+        "label": "北京区",
+        "value": 400200
+      },
+      {
+        "children": [
+          { "label": "四川1区", "value": 400301 },
+          { "label": "四川2区", "value": 400302 },
+          { "label": "四川3区", "value": 400303 },
+          { "label": "四川4区", "value": 400304 },
+          { "label": "四川5区", "value": 400305 },
+          { "label": "四川6区", "value": 400306 }
+        ],
+        "label": "四川区",
+        "value": 400300
+      },
+      {
+        "children": [
+          { "label": "江苏1区", "value": 400401 },
+          { "label": "江苏2区", "value": 400402 },
+          { "label": "江苏3区", "value": 400403 },
+          { "label": "江苏4区", "value": 400404 },
+          { "label": "江苏5/7区", "value": 400405 },
+          { "label": "江苏6区", "value": 400406 },
+          { "label": "江苏8区", "value": 400407 }
+        ],
+        "label": "江苏区",
+        "value": 400400
+      },
+      {
+        "children": [
+          { "label": "湖北1区", "value": 400501 },
+          { "label": "湖北2区", "value": 400502 },
+          { "label": "湖北3区", "value": 400503 },
+          { "label": "湖北4区", "value": 400504 },
+          { "label": "湖北5区", "value": 400505 },
+          { "label": "湖北6区", "value": 400506 },
+          { "label": "湖北7区", "value": 400507 },
+          { "label": "湖北8区", "value": 400508 }
+        ],
+        "label": "湖北区",
+        "value": 400500
+      },
+      {
+        "children": [
+          { "label": "广西1区", "value": 400601 },
+          { "label": "广西2/4区", "value": 400602 },
+          { "label": "广西3区", "value": 400603 },
+          { "label": "广西5区", "value": 400604 }
+        ],
+        "label": "广西区",
+        "value": 400600
+      },
+      {
+        "children": [
+          { "label": "东北1区", "value": 400701 },
+          { "label": "东北2区", "value": 400702 },
+          { "label": "东北4/5/6区", "value": 400703 },
+          { "label": "东北3/7区", "value": 400704 }
+        ],
+        "label": "东北区",
+        "value": 400700
+      },
+      {
+        "children": [
+          { "label": "浙江1区", "value": 400801 },
+          { "label": "浙江2区", "value": 400802 },
+          { "label": "浙江3区", "value": 400803 },
+          { "label": "浙江4/5区", "value": 400804 },
+          { "label": "浙江6区", "value": 400805 },
+          { "label": "浙江7区", "value": 400806 }
+        ],
+        "label": "浙江区",
+        "value": 400800
+      },
+      {
+        "children": [
+          { "label": "山东1区", "value": 400901 },
+          { "label": "山东2/7区", "value": 400902 },
+          { "label": "山东3区", "value": 400903 },
+          { "label": "山东4区", "value": 400904 },
+          { "label": "山东5区", "value": 400905 },
+          { "label": "山东6区", "value": 400906 }
+        ],
+        "label": "山东区",
+        "value": 400900
+      },
+      {
+        "children": [
+          { "label": "上海1区", "value": 401001 },
+          { "label": "上海2区", "value": 401002 },
+          { "label": "上海3区", "value": 401003 },
+          { "label": "上海4/5区", "value": 401004 }
+        ],
+        "label": "上海区",
+        "value": 401000
+      },
+      {
+        "children": [
+          { "label": "西南1区", "value": 401101 },
+          { "label": "西南2区", "value": 401102 },
+          { "label": "西南3区", "value": 401103 }
+        ],
+        "label": "西南区",
+        "value": 401100
+      },
+      {
+        "children": [
+          { "label": "安徽1区", "value": 401201 },
+          { "label": "安徽2区", "value": 401202 },
+          { "label": "安徽3区", "value": 401203 }
+        ],
+        "label": "安徽区",
+        "value": 401200
+      },
+      {
+        "children": [
+          { "label": "河北1区", "value": 401301 },
+          { "label": "河北2/3区", "value": 401302 },
+          { "label": "河北4区", "value": 401303 },
+          { "label": "河北5区", "value": 401304 }
+        ],
+        "label": "河北区",
+        "value": 401300
+      },
+      {
+        "children": [
+          { "label": "辽宁1区", "value": 401401 },
+          { "label": "辽宁2区", "value": 401402 },
+          { "label": "辽宁3区", "value": 401403 }
+        ],
+        "label": "辽宁区",
+        "value": 401400
+      },
+      {
+        "children": [
+          { "label": "福建1区", "value": 401501 },
+          { "label": "福建2区", "value": 401502 },
+          { "label": "福建3/4区", "value": 401503 }
+        ],
+        "label": "福建区",
+        "value": 401500
+      },
+      {
+        "children": [
+          { "label": "华北1区", "value": 401601 },
+          { "label": "华北2区", "value": 401602 },
+          { "label": "华北3区", "value": 401603 },
+          { "label": "华北4区", "value": 401604 }
+        ],
+        "label": "华北区",
+        "value": 401600
+      },
+      {
+        "children": [{ "label": "重庆1区", "value": 401701 }, { "label": "重庆2区", "value": 401702 }],
+        "label": "重庆区",
+        "value": 401700
+      },
+      {
+        "children": [{ "label": "黑龙江1区", "value": 401801 }, { "label": "黑龙江2/3区", "value": 401802 }],
+        "label": "黑龙江区",
+        "value": 401800
+      },
+      {
+        "children": [
+          { "label": "江西1区", "value": 401901 },
+          { "label": "江西2区", "value": 401902 },
+          { "label": "江西3区", "value": 401903 }
+        ],
+        "label": "江西区",
+        "value": 401900
+      },
+      {
+        "children": [{ "label": "西北1区", "value": 402001 }, { "label": "西北2/3区", "value": 402002 }],
+        "label": "西北区",
+        "value": 402000
+      },
+      {
+        "children": [{ "label": "陕西1区", "value": 402101 }, { "label": "陕西2/3区", "value": 402102 }],
+        "label": "陕西区",
+        "value": 402100
+      },
+      { "children": [{ "label": "吉林1/2区", "value": 402201 }], "label": "吉林区", "value": 402200 },
+      {
+        "children": [{ "label": "山西1区", "value": 402301 }, { "label": "山西2区", "value": 402302 }],
+        "label": "山西区",
+        "value": 402300
+      },
+      { "children": [{ "label": "天津1区", "value": 402401 }], "label": "天津区", "value": 402400 },
+      {
+        "children": [
+          { "label": "河南1区", "value": 402501 },
+          { "label": "河南2区", "value": 402502 },
+          { "label": "河南3区", "value": 402503 },
+          { "label": "河南4区", "value": 402504 },
+          { "label": "河南5区", "value": 402505 }
+        ],
+        "label": "河南区",
+        "value": 402500
+      },
+      {
+        "children": [
+          { "label": "湖南1区", "value": 402601 },
+          { "label": "湖南2区", "value": 402602 },
+          { "label": "湖南3区", "value": 402603 },
+          { "label": "湖南4区", "value": 402604 },
+          { "label": "湖南5区", "value": 402605 },
+          { "label": "湖南6区", "value": 402606 },
+          { "label": "湖南7区", "value": 402607 }
+        ],
+        "label": "湖南区",
+        "value": 402600
+      },
+      { "children": [{ "label": "新疆1区", "value": 402701 }], "label": "新疆区", "value": 402700 },
+      { "children": [{ "label": "内蒙古1区", "value": 402801 }], "label": "内蒙古区", "value": 402800 },
+      {
+        "children": [
+          { "label": "云贵1区", "value": 402901 },
+          { "label": "云南1区", "value": 402902 },
+          { "label": "贵州1区", "value": 402903 }
+        ],
+        "label": "云贵区",
+        "value": 402900
+      },
+      { "children": [{ "label": "体验服", "value": 403001 }], "label": "体验服", "value": 403000 }
+    ],
+    "label": "地下城与勇士",
+    "value": 40000000
+  },
+  {
+    "children": [
+      {
+        "children": [
+          { "label": "一区", "value": 500101 },
+          { "label": "二区", "value": 500102 },
+          { "label": "三区", "value": 500103 }
+        ],
+        "label": "电信",
+        "value": 500100
+      },
+      {
+        "children": [{ "label": "一区", "value": 500201 }, { "label": "二区", "value": 500202 }],
+        "label": "网通",
+        "value": 500200
+      }
+    ],
+    "label": "反恐精英OL",
+    "value": 50000000
+  },
+  {
+    "children": [
+      { "children": [{ "label": "电信一服", "value": 600101 }], "label": "电信区", "value": 600100 },
+      { "children": [{ "label": "联通一服", "value": 600201 }], "label": "联通区", "value": 600200 }
+    ],
+    "label": "逆战",
+    "value": 60000000
+  },
+  {
+    "children": [
+      {
+        "children": [{ "label": "内测区(电信)", "value": 700101 }, { "label": "枪神之路", "value": 700102 }],
+        "label": "电信区",
+        "value": 700100
+      },
+      {
+        "children": [{ "label": "内测区(网通)", "value": 700201 }, { "label": "荣耀之心", "value": 700202 }],
+        "label": "网通区",
+        "value": 700200
+      }
+    ],
+    "label": "枪神纪",
+    "value": 70000000
+  },
+  {
+    "children": [{ "children": [{ "label": "全区全服", "value": 800101 }], "label": "全区全服", "value": 800100 }],
+    "label": "守望先锋",
+    "value": 80000000
+  },
+  {
+    "children": [
+      {
+        "children": [
+          { "label": "艾欧尼亚", "value": 900101 },
+          { "label": "暗影岛", "value": 900102 },
+          { "label": "班德尔城", "value": 900103 },
+          { "label": "裁决之地", "value": 900104 },
+          { "label": "钢铁烈阳", "value": 900105 },
+          { "label": "黑色玫瑰", "value": 900106 },
+          { "label": "巨神峰", "value": 900107 },
+          { "label": "均衡教派", "value": 900108 },
+          { "label": "卡拉曼达", "value": 900109 },
+          { "label": "雷瑟守备", "value": 900110 },
+          { "label": "诺克萨斯", "value": 900111 },
+          { "label": "皮城警备", "value": 900112 },
+          { "label": "皮尔特沃夫", "value": 900113 },
+          { "label": "守望之海", "value": 900114 },
+          { "label": "水晶之痕", "value": 900115 },
+          { "label": "影流", "value": 900116 },
+          { "label": "战争学院", "value": 900117 },
+          { "label": "征服之海", "value": 900118 },
+          { "label": "祖安", "value": 900119 }
+        ],
+        "label": "电信区",
+        "value": 900100
+      },
+      {
+        "children": [
+          { "label": "比尔吉沃", "value": 900201 },
+          { "label": "德玛西亚", "value": 900202 },
+          { "label": "弗雷尔卓德", "value": 900203 },
+          { "label": "无畏先锋", "value": 900204 },
+          { "label": "恕瑞玛", "value": 900205 },
+          { "label": "扭曲丛林", "value": 900206 },
+          { "label": "巨龙之巢", "value": 900207 },
+          { "label": "教育网专区", "value": 900208 }
+        ],
+        "label": "网通区",
+        "value": 900200
+      },
+      {
+        "children": [{ "label": "男爵领域", "value": 900301 }, { "label": "峡谷之巅", "value": 900302 }],
+        "label": "全网络大区",
+        "value": 900300
+      }
+    ],
+    "label": "英雄联盟",
+    "value": 90000000
+  }
+]

@@ -1,0 +1,183 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  background-color: #eaedf1;
+  border: 0;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border: 0;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+}
+.search-box {
+  border: 1px solid #eee;
+  background-color: #fff;
+  padding: 20px 20px 10px 20px;
+}
+.el-tabs__header {
+  margin-bottom: 0px;
+}
+.lightblue {
+  color: #7ab5da;
+}
+.green {
+  color: #8bc34a;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.el-dialog--small {
+  width: 1040px !important;
+}
+.lg-outer,
+.lg-backdrop {
+  z-index: 3000 !important;
+}
+.el-dialog--tiny {
+  width: 500px !important;
+}
+.el-table .info-row {
+  background-color: #c9e5f5;
+}
+.el-table .success-row {
+  background-color: #e2f0e4;
+}
+.el-table .error-row {
+  background-color: #ffafaf;
+}
+.w-e-text-container {
+  height: 500px !important;
+}
+.el-tabs__item .el-icon-close:hover {
+  background-color: #ff4949 !important;
+}
+.el-loading-mask {
+  z-index: 1000 !important;
+}
