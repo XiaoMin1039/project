@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作记录</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+</head>
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>安全中心</span> / <span>操作记录</span>
+        </div>
+        <!--表格数据-->
+        <div class="table-wrap">
+        <table class="table-main">
+            <thead>
+            <tr>
+                <th>操作流水</th>
+                <th>操作类型</th>
+                <th>执行结果</th>
+                <th>操作时间</th>
+                <th>操作IP</th>
+                <th>IP归属地</th>
+            </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/safety-history-operation.js"></script>
+<script id="tbodyTemplate" type="text/html">
+    {{  if object.length !== 0 }}
+    {{ each object as item i }}
+    <tr>
+        <!--操作流水-->
+        <td>
+            {{ item.optionMonitorId }}
+        </td>
+        <!--操作类型-->
+        <td>
+            {{ if item.optionType == 1 }}修改登录密码
+            {{ else if item.optionType == 2 }}修改支付密码
+            {{ else if item.optionType == 3 }}修改手机号
+            {{ else if item.optionType == 4 }}绑定第三方账号
+            {{ else if item.optionType == 5 }}修改昵称
+            {{ else if item.optionType == 6 }}绑定身份证
+            {{ else if item.optionType == 7 }}实名认证
+            {{ else if item.optionType == 8 }}设置使用支付密码
+            {{ else if item.optionType == 9 }}签约账号
+            {{ else if item.optionType == 10 }}修改账号密码
+            {{ else if item.optionType == 11 }}下架
+            {{ else if item.optionType == 12 }}上架
+            {{ /if }}
+        </td>
+        <!--执行结果-->
+        <td>
+            {{ item.optionNote }}
+        </td>
+        <!--操作时间-->
+        <td>
+            {{ item.optionTime | dateFormat:'yyyy年MM月dd日 hh:mm:ss' }}
+        </td>
+        <!--操作IP-->
+        <td>
+            {{ item.optionIp }}
+        </td>
+        <!--IP归属地-->
+        <td>
+            {{ item.optionIpAddr }}
+        </td>
+    </tr>
+    {{ /each }}
+    {{ else }}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+
+</body>
+</html>

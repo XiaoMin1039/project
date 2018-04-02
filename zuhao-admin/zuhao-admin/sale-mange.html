@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>买家申诉维权管理</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+</head>
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>售后中心</span> / <span>买家申诉维权管理</span>
+        </div>
+        <!--多框搜索-->
+        <div class="search-bg multi-search show">
+            <ul>
+                <li class="multi-search-item">
+                    <span>订单号</span>
+                    <i class="imgfont img-question" id="orderIdNotice"></i>
+                    <input type="text" placeholder="请输入订单号码、上号激活码或产品标题" id="orderId">
+                </li>
+                <li class="multi-search-item">
+                    <span>售后状态</span>
+                    <i class="imgfont img-question" id="stateNotice"></i>
+                    <div id="state" class="borderAll">
+                        <div class="select_text"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>售后分类</span>
+                    <i class="imgfont img-question" id="typeNotice"></i>
+                    <div id="type" class="borderAll">
+                        <div class="select_text"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item time-box" >
+                    <span>售后申请时间</span>
+                    <i class="imgfont img-question"  id="timeFrameNotice"></i>
+                    <input type="text" id="timeFrameBefore" >
+                </li>
+                <li class="multi-search-item-single ">
+                    <button class="button-event-middle-blue" id="search">搜索</button>
+                </li>
+            </ul>
+        </div>
+
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">所有状态</li>
+                <li>处理中</li>
+                <li>处理成功</li>
+                <li>处理失败</li>
+            </ul>
+        </div>
+        <div class="table-wrap">
+        <table class="table-main">
+            <thead>
+            <tr>
+                <th>售后订单号</th>
+                <th>申请时间</th>
+                <th>售后分类</th>
+                <th>剩余售后截止时间</th>
+                <th>赔付金额</th>
+                <th>售后状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/laydate/laydate.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+
+<script src="http://zudahao.zudahao.com/agents2/js/sale-magage.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/sale-magage.js"></script>
+
+<!--页面表格内容-->
+<script id="tbodyTemplate" type="text/html">
+    {{  if claimOrders.length !== 0 }}
+    {{each claimOrders as item i}}
+    <tr data-id="{{ item.orderId}}">
+        <td>{{ item.orderId}}</td>
+        <td>{{ item.claimCreateTime | dateFormat:'yyyy-MM-dd hh:mm:ss'}}</td>
+        <td>
+            {{ if item.claimState == 0 }}未读
+            {{ else if item.claimState == 1  }}商品不符
+            {{ else if item.claimState == 2  }}卖家骚扰或辱骂
+            {{ else if item.claimState == 3  }}密码错误
+            {{ else if item.claimState == 4  }}无法登陆
+            {{ else if item.claimState == 5  }}撤单
+            {{ else if item.claimState == 6 || item.claimState == 13 }}其他
+            {{ else if item.claimState == 11  }}买家违规
+            {{ else if item.claimState == 12  }}买家辱骂或骚扰
+            {{ /if }}
+        </td>
+        <td>{{ item.claimCreateTime+86400000*3 | dateFormat:'yyyy-MM-dd hh:mm:ss'}}</td>
+        <td>{{ item.complainMoney }}元</td>
+        <td>
+            {{ if item.claimState == 1 }}交涉中
+            {{else if item.claimState == 2 }}后台仲裁中
+            {{else if item.claimState == 3 }}通过
+            {{else if item.claimState == 4 }}失败
+            {{else if item.claimState == 5 }}撤销
+            {{ /if }}
+        </td>
+        <td><button class="button-event-small-blue" id="look"><a href="sale-complain.html?orderId={{item.orderId}}" target="_blank">管理</a></button></td>
+    </tr>
+    {{/each}}
+    {{ else }}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+
+</body>
+</html>

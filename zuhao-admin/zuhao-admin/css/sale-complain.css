@@ -1,0 +1,58 @@
+.complain-box {
+  background-color: #FCFCFC;
+  border: 1px solid #EBEDF3;
+  margin-top: 24px;
+}
+.complain-box ul.complain-box-info {
+  margin: 36px 90px;
+}
+.complain-box ul.complain-box-info li {
+  font-size: 15px;
+  line-height: 32px;
+}
+.complain-box ul.complain-box-info .imgfont {
+  vertical-align: inherit;
+}
+.complain-box-item {
+  margin-left: 90px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.complain-box-item img {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+}
+.complain-box-item .complain-speaker {
+  width: 63px;
+  height: 63px;
+  font-size: 15px;
+  float: left;
+  line-height: 62px;
+  border-radius: 4px;
+  text-align: center;
+  color: #ffffff;
+}
+.complain-box-item .speaker-user {
+  background-color: #FF721C;
+}
+.complain-box-item .speaker-agents {
+  background-color: #2492E4;
+}
+.complain-box-item .speaker-super {
+  background-color: #D9534F;
+}
+.complain-box-item .complain-speak {
+  float: left;
+  line-height: 32px;
+  margin-left: 30px;
+  width: 80%;
+}
+.complain-box-item .complain-speak .speak-time {
+  color: #B5B5B5;
+}
+
+.picContainer img{
+  width:100%;
+}

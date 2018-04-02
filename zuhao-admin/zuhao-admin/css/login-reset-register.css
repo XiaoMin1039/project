@@ -1,0 +1,219 @@
+body{
+    background-color: #393D49;
+}
+.login-wrap {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 540px;
+    height: 520px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -270px;
+    margin-top: -300px;
+    box-shadow: 0 0 20px -3px #ffffff;
+    animation:totop 1s 1;
+    -webkit-animation:totop 1s 1;
+}
+.register {
+    height: 800px;
+    margin-top: -400px;
+}
+.reset-password {
+    height: 600px;
+    margin-top: -300px;
+}
+
+@keyframes totop
+{
+    from {top:60%;opacity: 0}
+    to {top:50%;opacity: 1}
+}
+
+@-webkit-keyframes totop /*Safari and Chrome*/
+{
+    from {top:60%;opacity: 0}
+    to {top:50%;opacity: 1}
+}
+
+
+.login-img {
+    width: 540px;
+    height: 863px;
+    float: left;
+    overflow: hidden;
+}
+
+
+
+
+.login-img img{
+    width: 100%;
+    height: 100%;
+}
+.login-form {
+    position: relative;
+    width: 414px;
+    height: 620px;
+    float: left;
+    padding: 60px 63px;
+}
+
+.form-caption {
+    overflow: hidden;
+}
+
+.form-caption span {
+    font-size: 37px;
+    color: #000;
+    float: left;
+}
+.form-caption div {
+    float: right;
+}
+
+.form-caption .url a {
+    font-size: 13px;
+    color: #359eff;
+    text-decoration: none;
+    line-height: 56px;
+    float: none;
+}
+.form-caption .url a:hover {
+    color: #2b72ff;
+}
+.login-wrap .form-content {
+    padding-top: 20px;
+}
+
+.form-item {
+    position: relative;
+}
+
+a {
+    font-size: 13px;
+    color: #359eff;
+    text-decoration: none;
+    line-height: 56px;
+    float: right;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2b72ff;
+}
+
+.login-wrap .form-content .form-item input {
+    padding: 0;
+    color: #222;
+    padding-left: 12px;
+    width: 402px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 46px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+    border: 1px solid #ECECEC;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #9ecaed;
+    border-color: #549df8;
+}
+:-moz-placeholder {
+    color: #ccc;
+}
+
+::-moz-placeholder {
+    color: #ccc;
+}
+
+input:-ms-input-placeholder {
+    color: #ccc;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.login-wrap .form-content input.yzm {
+    width: 142px;
+}
+
+.login-wrap .form-content input.phone-yzm {
+    width: 236px;
+}
+
+.form-content img {
+    height: 36px;
+}
+
+.yzm-img {
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+button.get-yzm, button.event{
+    width: 100%;
+    height: 54px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+button.get-yzm:hover, button.event:hover {
+    background-color: #307ceb;
+    border: 1px solid #3083ff;
+}
+
+
+button.get-yzm {
+    background-color: #3083ff;
+    border: 1px solid #3083ff;
+    width: 150px;
+    font-size: 14px;
+    height: 44px;
+}
+
+button.event {
+    background-color: #549DF8;
+    border: 1px solid #549DF8;
+    margin-top: 26px;
+    font-size: 20px;
+}
+
+/*button#reset ,*/
+button.forget {
+    width: 414px;
+    bottom: 100px;
+    position: absolute;
+    margin-top: 80px;
+    background-color: #F76E6E;
+    border: 1px solid #FC4C4C;
+}
+button.forget>a{
+    text-decoration: none;
+    font-size: 20px;
+    float: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.imgfont {
+    vertical-align: inherit;
+}
+
+/*报错*/
+.error-box {
+    position: absolute;
+    width: 414px;
+    bottom: -6px;
+    font-size: 15px;
+    color: #FC4C4C;
+}
+
+button.banClick{
+    color: #ccc;
+    background:#f0f0f0 !important;
+    pointer-events: none !important;
+    border: 1px solid #f0f0f0 !important;
+}

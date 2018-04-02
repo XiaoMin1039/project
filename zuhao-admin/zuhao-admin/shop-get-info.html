@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--<link rel="icon" href="favicon.ico">-->
+    <title>系统公告</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/shop-get-info.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>店铺管理</span> / <span>系统公告</span>
+        </div>
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">所有状态</li>
+                <li>未读</li>
+                <li>已读</li>
+                <a class="line"></a>
+            </ul>
+        </div>
+        <!--站内信-->
+        <div class="shop-get-info table-wrap">
+            <div class="shop-get-info-title" id="tbody">
+
+            </div>
+            <div class="shop-get-info-content hide">
+                <div class="content-title">
+                </div>
+                <div class="content-type">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="content-info">
+                </div>
+            </div>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/shop-get-info.js"></script>
+
+<!--页面表格内容-->
+<script id="tbodyTemplate" type="text/html">
+    {{  if agentsMessages.length !== 0 }}
+    {{each agentsMessages as item i}}
+    {{ if item.status == 1}}
+    <div class="title-item title-item-select" data-id="{{item.messageId}}">
+        {{ else }}
+        <div class="title-item"  data-id="{{item.messageId}}">
+        {{ /if}}
+        <div class="message-box">
+            <div class="message-type">
+                {{if item.messageType == 1 }}系统通知
+                {{else if item.messageType == 2 }}审核通知
+                {{else if item.messageType == 3 }}提现通知
+                {{else if item.messageType == 4 }}活动通知
+                {{else if item.messageType == 5 }}监控通知
+                {{/if }}
+            </div>
+            <div class="message-time">
+                {{ item.sendTime | dateFormat:'yyyy-MM-dd hh:mm'}}
+            </div>
+        </div>
+        <div class="message-content text-limit">
+                <span>
+                    {{item.title}}：
+                </span>
+                <span class="">
+                {{item.content}}
+                </span>
+        </div>
+    </div>
+
+    {{/each}}
+    {{ else }}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+
+
+</body>
+</html>

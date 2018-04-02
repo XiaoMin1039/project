@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/login-reset-register.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="login-wrap only-login">
+    <!--<div class="login-img">-->
+        <!--<img src="http://zudahao.zudahao.com/agents2/images/chiji.png" alt="">-->
+    <!--</div>-->
+    <div class="login-form">
+        <div class="form-caption">
+            <span>商家后台登录</span>
+            <div class="url">
+                <a href="register.html">申请入驻</a>&nbsp;&nbsp;<a href="reset-password.html">忘记密码</a>
+            </div>
+        </div>
+        <div class="form-content">
+            <div class="form-item">
+                <input type="text" placeholder="请输入用户名或者手机号码" id="loginName">
+            </div>
+            <div class="form-item">
+                <input type="password" placeholder="请输入密码" id="user_pwd">
+            </div>
+            <div class="form-item ">
+                <input type="text" class="yzm" placeholder="数字验证码" maxlength="4" id="imgCode">
+                <img src="" class="yzm-img change-yzm" id="code_img" alt="加载出错，请重试">
+                <a href="#" class="change-yzm">看不清？换一张。</a>
+            </div>
+            <div class="form-item" id="errorBox"></div>
+            <button id="login" class="event banClick">登录</button>
+        </div>
+        <!--<button class="forget"><a href="reset-password.html">忘记密码</a></button>-->
+    </div>
+</div>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/loginRegister.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/login-reset-register.css" rel="stylesheet">
+</head>
+<body>
+<div class="login-wrap register">
+    <!--<div class="login-img">-->
+        <!--<img src="http://zudahao.zudahao.com/agents2/images/chiji.png" alt="">-->
+    <!--</div>-->
+    <div class="login-form">
+        <div class="form-caption">
+            <span>商家注册</span>
+            <a href="login.html">立即登录</a>
+        </div>
+        <div class="form-content">
+            <div class="form-item">
+                <input type="text" placeholder="请输入用户名" maxlength="16" id="user_name">
+            </div>
+            <div class="form-item">
+                <input type="password" class="preAutoFill" style="display: none"  autocomplete="off" >
+                <input oninput="if(this.value==''){this.type='text'}else(this.type='password')" placeholder="请输入密码" maxlength="16" id="user_pwd">
+            </div>
+            <div class="form-item">
+                <input type="password" class="preAutoFill" style="display: none"  autocomplete="off" >
+                <input oninput="if(this.value==''){this.type='text'}else(this.type='password')" placeholder="请确认密码" maxlength="16" id="user_repeat_pwd">
+            </div>
+            <div class="form-item">
+                <input type="text" placeholder="请输入手机号码" id="phone">
+            </div>
+            <div class="form-item ">
+                <input type="text" class="phone-yzm" placeholder="请输入手机验证码" maxlength="6" id="phoneCode">
+                <button class="button-event-middle-blue" id="fetchPhoneCode">获取手机验证码</button>
+                <button class="button-event-middle-gray hide" id="getPhoneCode">60秒</button>
+            </div>
+            <div class="form-item">
+                <input type="text" maxlength="12" placeholder="请确认店铺名" id="shopName">
+            </div>
+            <div class="form-item">
+                <input type="text" placeholder="请输入支付密码" id="payPwd">
+            </div>
+            <div class="form-item" id="errorBox"></div>
+            <button id="register" class="event banClick">注册</button>
+        </div>
+    </div>
+</div>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/loginRegister.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/register.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/register.js"></script>
+</body>
+</html>

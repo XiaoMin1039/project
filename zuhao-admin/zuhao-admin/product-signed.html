@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>管理宝贝</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>宝贝管理</span> / <span>签约管理</span>
+        </div>
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">所有状态</li>
+                <li>正常可租</li>
+                <li>正常已租</li>
+                <li>下架</li>
+                <a class="line"></a>
+            </ul>
+        </div>
+        <!--表格-->
+        <table class="table-main">
+            <thead>
+            <tr>
+                <th>产品序号</th>
+                <th>产品状态</th>
+                <th>剩余时间</th>
+                <th>标题</th>
+                <th>异常</th>
+                <th>信息</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+
+<script src="http://zudahao.zudahao.com/agents2/Interface/product-signed.js"></script>
+
+<!--页面表格内容-->
+<script  id="tbodyTemplate" type="text/html">
+    {{ if accountSignDtos.length !== 0 }}
+    {{each accountSignDtos as item i}}
+    <tr data-id="{{ item.productId }}">
+        <td>{{ item.productId }}</td>
+        <td>
+            {{ if item.state == 1 }}正常可租
+            {{ else if item.state == 2 }}正常已租
+            {{ else if item.state == 5 }}下架
+            {{ /if }}
+        </td>
+        <td>
+            {{ if residueTime(item.signEndTime)>0 }}
+                {{residueTime(item.signEndTime)}}天
+            {{else}}
+                结束
+            {{/if}}
+        </td>
+        <td class="text-limit20">{{ item.productTitle }}</td>
+        <td>
+            {{ if item.errorState == 0 }}
+            无异常
+            {{else if item.errorState == 1  }}
+             有异常
+            {{ /if }}
+        </td>
+        <td>
+            {{ if item.errorState == 1 }}
+            {{ item.errorMessage }}
+            {{ /if }}
+        </td>
+        <td><button class="button-event-small-blue">管理</button> </td>
+    </tr>
+    {{/each}}
+    {{ else }}
+    <div class="undefined"></div>
+    {{ /if }}
+</script>
+
+</body>
+</html>

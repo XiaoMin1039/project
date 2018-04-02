@@ -1,0 +1,77 @@
+.shop-get-info{
+    width: 100%;
+    overflow: hidden;
+    color: #393D49;
+}
+.shop-get-info .shop-get-info-title {
+    width: 250px;
+    line-height: 30px;
+    float: left;
+    box-sizing: border-box;
+    font-size: 13px;
+    /*background-color: #FBFBFB;*/
+}
+/*已读状态*/
+.shop-get-info .shop-get-info-title .title-item.title-item-select{
+    opacity: 0.3;
+}
+/*正在点击的状态*/
+.shop-get-info .shop-get-info-title .title-item.title-item-reading{
+    /*opacity: 0.9;*/
+    background-color: #fdfdfd;
+    color: #000000;
+}
+/*已读的点击状态*/
+.shop-get-info .shop-get-info-title .title-item.title-item-select.title-item-reading{
+    opacity: 0.6;
+    background-color: #fbfbfb;
+    color: #000000;
+}
+
+
+/*未读不添加*/
+.shop-get-info .shop-get-info-title .title-item {
+    opacity: 1;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 20px 0 10px;
+}
+.shop-get-info .shop-get-info-title .message-box{
+    overflow: hidden;
+}
+.shop-get-info .shop-get-info-title .message-type{
+    float: left;
+    font-weight: 600;
+}
+.shop-get-info .shop-get-info-title .message-time{
+    float: right;
+}
+.shop-get-info .shop-get-info-title .message-content{
+    box-sizing: border-box;
+}
+
+.shop-get-info .shop-get-info-content {
+    background-color: #fdfdfd;
+    width: 74%;
+    margin-left: 280px;
+    height: 600px;
+    padding: 16px 36px;
+}
+.shop-get-info .shop-get-info-content .content-title{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 50px;
+}
+.shop-get-info .shop-get-info-content .content-type{
+    font-size: 13px;
+    line-height: 30px;
+
+}
+.shop-get-info .shop-get-info-content .content-info{
+    border-top: 1px solid #FBFBFB;
+    font-size: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    line-height: 30px;
+}

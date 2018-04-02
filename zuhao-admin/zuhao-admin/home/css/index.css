@@ -1,0 +1,527 @@
+a {
+  text-decoration: none;
+  font-family: "Microsoft YaHei", serif;
+}
+a:hover {
+  text-decoration: none;
+}
+input {
+  outline: none;
+}
+.hide {
+  display: none;
+}
+.header-wrap,
+.search,
+.banner-wrap,
+.change,
+.picture {
+  font-family: "Microsoft YaHei", serif;
+  width: 1190px;
+  margin: 0 auto;
+}
+div.more {
+  float: right;
+}
+div.more a {
+  font-size: 12px;
+  color: #9A9A9A !important;
+  font-weight: normal;
+}
+div.more a:hover {
+  color: #666!important;
+  text-decoration: none !important;
+}
+.banner {
+  background-color: #000000;
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 403px;
+}
+.banner .banner-wrap {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  margin-left: -595px;
+}
+.banner .game-lists {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.banner .game-lists li {
+  color: #333333;
+}
+.banner .banner-change {
+  float: left;
+  width: 680px;
+  padding-left: 5px;
+}
+.banner .banner-change-nav {
+  width: 100%;
+  height: 40px;
+}
+.banner .banner-change-nav li {
+  float: left;
+  color: #000000;
+  font-size: 13px;
+  padding-left: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+.banner .banner-change-nav li:hover {
+  color: #d7063b;
+}
+.banner .banner-change-info {
+  width: 100%;
+  height: 297px;
+  background-color: #d7063b;
+}
+.banner .banner-change-info img {
+  width: 100%;
+  height: 298px;
+}
+.banner .banner-change-card {
+  overflow: hidden;
+  padding: 8px 8px;
+  margin-top: 5px;
+  height: 78px;
+  border: 1px solid #f4f4f4;
+  background-color: #ffffff;
+}
+.banner .banner-change-card img {
+  float: left;
+  width: 124px;
+  height: 78px;
+}
+.banner .banner-change-card .info-card {
+  float: left;
+  margin-left: 10px;
+  width: 524px;
+  margin-top: 3px;
+}
+.banner .banner-change-card .card-title > a {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 26px;
+  color: #000000;
+}
+.banner .banner-change-card .card-title > a:hover {
+  color: #d7063b;
+  text-decoration: none;
+}
+.banner .banner-change-card .card-content a {
+  margin-top: 6px;
+  line-height: 26px;
+  font-size: 13px;
+  height: 44px;
+  overflow: hidden;
+  color: #000000;
+}
+.banner .banner-info {
+  float: left;
+  width: 250px;
+  padding-left: 5px;
+  font-size: 12px;
+  margin-top: 36px;
+}
+.banner .banner-info a {
+  color: #000000;
+  text-decoration: none;
+}
+.banner .banner-info a:hover {
+  color: #d7063b;
+  text-decoration: none;
+}
+.banner .banner-info-join {
+  margin-top: 9px;
+  height: 90px;
+  background-color: #ffffff;
+}
+.banner .banner-info-join .img.img-login {
+  width: 54px;
+  height: 58px;
+  display: block;
+  margin: 0 auto;
+  background: url('../images/zudahao.png');
+  background-repeat: no-repeat;
+  background-position: -233px -10px;
+}
+.banner .banner-info-join li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  line-height: 30px;
+}
+.banner .banner-info-news {
+  margin-top: 5px;
+  padding: 10px;
+  height: 177px;
+  overflow: hidden;
+  background-color: #ffffff;
+  line-height: 25px;
+}
+.banner .banner-info-news .banner-info-news-title li {
+  font-size: 13px;
+  float: left;
+  line-height: 26px;
+  margin-bottom: 6px;
+  width: 20%;
+  text-align: center;
+  border-bottom: 3px solid #ffffff;
+  cursor: pointer;
+}
+.banner .banner-info-news .banner-info-news-title li:hover {
+  font-weight: 600;
+}
+.banner .banner-info-news .banner-info-news-title li.active {
+  font-weight: 600;
+  border-bottom: 3px solid #d7063b;
+}
+.banner .banner-info-news .banner-info-news-box > ul {
+  display: none;
+}
+.banner .banner-info-news .banner-info-news-box > ul.active {
+  display: block;
+}
+.banner .banner-info-news .banner-info-news-box li:first-child a {
+  color: #d7063b;
+}
+.banner .banner-info-news .banner-info-news-box li > span {
+  float: right;
+}
+.banner .banner-info-help {
+  padding: 10px;
+  height: 76px;
+  overflow: hidden;
+  background-color: #ffffff;
+  line-height: 20px;
+  margin-top: 5px;
+}
+.banner .banner-info-help .banner-info-help-title {
+  font-weight: 600;
+  font-size: 13px;
+}
+.banner .banner-info-help .banner-info-help-content {
+  overflow: hidden;
+}
+.banner .banner-info-help .banner-info-help-content > li {
+  display: inline-block;
+  padding-right: 10px;
+}
+.change {
+  font-size: 13px;
+  color: #919191;
+  overflow: hidden;
+}
+.change .change-box {
+  width: 585px;
+  padding: 5px 0 5px 5px;
+  float: left;
+  border: 1px solid #f4f4f4;
+}
+.change .change-box:nth-child(odd) {
+  margin-right: 5px;
+}
+.change .change-box-title {
+  line-height: 50px;
+  overflow: hidden;
+}
+.change .change-box-title .img.img-new {
+  width: 47px;
+  height: 45px;
+  float: left;
+  background: url('../images/zudahao.png');
+  background-repeat: no-repeat;
+  background-position: -365px -22px;
+}
+.change .change-box-title .img.img-hot {
+  width: 47px;
+  height: 45px;
+  float: left;
+  background: url('../images/zudahao.png');
+  background-repeat: no-repeat;
+  background-position: -407px -22px;
+}
+.change .change-box-img li:last-child {
+  cursor: pointer;
+}
+.change .change-box-img li {
+  float: left;
+  width: 143px;
+  height: 145px;
+  border: 1px solid #f4f4f4;
+  position: relative;
+  overflow: hidden;
+}
+.change .change-box-img li > i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 40px auto 10px;
+  font-size: 42px;
+  text-align: center;
+}
+.change .change-box-img li > p {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+.change .change-box-img li img {
+  width: 100%;
+  height: 100%;
+}
+.change .change-box-img li:hover .img-info {
+  transition: 0.35s;
+  bottom: 0;
+}
+.change .change-box-img li:hover .img-info .img-title {
+  text-align: center;
+  margin-top: 10px;
+}
+.change .change-box-img li:hover .img-info .img-money {
+  text-align: center;
+  margin-top: 16px;
+}
+.change .img-info {
+  transition: 0.5s;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 125px;
+  padding: 0 10px;
+  height: 145px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.change .img-info .img-title {
+  color: #ffffff;
+  line-height: 26px;
+}
+.change .img-info .img-money {
+  color: #d7063b;
+  line-height: 20px;
+}
+.change .img-info button {
+  background-color: #FFC800;
+  color: #000000;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #FFC800;
+  width: 96px;
+  display: block;
+  height: 24px;
+  margin: 25px auto;
+  line-height: 22px;
+  cursor: pointer;
+}
+.picture {
+  overflow: hidden;
+  margin-top: 50px;
+}
+.picture li {
+  position: relative;
+  width: 184px;
+  height: 300px;
+  margin-right: 17px;
+  border-radius: 3px;
+  float: left;
+}
+.picture li:hover .picture-info {
+  height: 120px;
+  bottom: 0;
+  transition: 0.5s;
+}
+.picture li:last-child {
+  margin-right: 0;
+}
+.picture img {
+  width: 100%;
+  height: 220px;
+}
+.picture .picture-info {
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 26px;
+  background-color: #f4f4f4;
+}
+.picture .picture-info .picture-info-title {
+  padding-top: 16px;
+  font-weight: 600;
+}
+.footer {
+  margin-top: 20px;
+}
+.footer .footer-connect-wrap,
+.footer .footer-help-wrap,
+.footer .footer-type-wrap {
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+.footer .footer-box {
+  width: 1190px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer .footer-type {
+  margin: 20px 0;
+  overflow: hidden;
+}
+.footer .footer-type > li {
+  width: 220px;
+  padding-left: 16px;
+  float: left;
+  border-right: 1px solid #ccc;
+}
+.footer .footer-type > li:last-child {
+  border-right: none;
+}
+.footer .footer-type > li i {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #f0ad4e;
+}
+.footer .footer-type > li .tit-desc {
+  margin-left: 14px;
+  float: left;
+}
+.footer .footer-type > li .tit {
+  color: #333;
+  line-height: 18px;
+  vertical-align: text-top;
+  font-weight: bold;
+}
+.footer .footer-type > li .desc {
+  color: #999;
+  line-height: 30px;
+}
+.footer .footer-help {
+  color: #666;
+  font-size: 16px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.footer .footer-help > li {
+  padding-left: 16px;
+  width: 380px;
+  float: left;
+  font-weight: bold;
+}
+.footer .footer-help > li a {
+  color: #666;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: normal;
+}
+.footer .footer-connect {
+  margin: 20px 0;
+}
+.footer .footer-connect a {
+  color: #666;
+  font-size: 12px;
+  line-height: 22px;
+}
+.footer .footer-connect i {
+  padding: 0 10px;
+}
+.footer .footer-connect div {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/*这个是游戏下拉框*/
+.game-select {
+  background-color: #ffffff;
+  border: 3px solid #d7063b;
+  border-top: none;
+  border-radius: 4px;
+  z-index: 12;
+  cursor: auto;
+  left: -3px;
+  top: 32px;
+}
+.game-select ul {
+  width: 100%;
+  height: 40px;
+  background-color: #f7f7f7;
+}
+.game-select ul li {
+  line-height: 40px;
+  text-align: center;
+  width: 33%;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+}
+.game-select ul .active {
+  background-color: #ffffff;
+}
+.game-select .game-select-item {
+  background-color: #ffffff;
+}
+.game-select .game-select-item .shortening,
+.game-select .game-select-item .item-name {
+  width: 100%;
+}
+.game-select .game-select-item i {
+  margin-left: 10px;
+  display: inline-block;
+  margin-top: 8px;
+  cursor: pointer;
+  padding: 1px 2px;
+}
+.game-select .game-select-item i:hover {
+  color: #d7063b;
+}
+.game-select .game-select-item i.active {
+  background-color: #d7063b;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.game-select .game-select-item .curr {
+  color: #d7063b;
+  border-radius: 4px;
+}
+.game-select .game-select-item input {
+  display: block;
+  margin: 10px auto;
+  width: 95%;
+  border: 1px solid #F0F0F0;
+}
+.clearBoth:after {
+  visibility: hidden;
+  content: " ";
+  height: 0;
+  display: block;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.opacity0 {
+  opacity: 0;
+}
+.absolute {
+  position: absolute !important;
+}
+.fixed {
+  position: fixed !important;
+}

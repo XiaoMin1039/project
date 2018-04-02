@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>支付密码重置</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+</head>
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>安全中心</span> / <span>支付密码重置</span>
+        </div>
+        <!--表单-->
+        <div class="form">
+            <ul>
+                <li class="form-content">
+                    <span>* 注册的手机号码</span>
+                    <i class="imgfont img-notice" id="oldPhoneTip" data-id="tipPop"></i>
+                    <input type="text" placeholder="请输入手机号码" id="oldPhone" maxlength="11">
+                </li>
+                <li class="form-content">
+                    <span>* 手机验证码</span>
+                    <i class="imgfont img-notice" id="phoneCodeTip" data-id="tipPop"></i>
+                    <input type="text" placeholder="请输入手机验证码" id="phoneCode" maxlength="6">
+                    <button class="button-event-middle-blue" id="fetchPhoneCode">获取手机验证码</button>
+                    <button class="button-event-middle-gray hide" id="getPhoneCode">60秒</button>
+                </li>
+                <li class="form-content">
+                    <span>* 输入新的支付密码</span>
+                    <i class="imgfont img-notice" id="sixDigTip2" data-id="tipPop"></i>
+                    <div id="sixDig2" class="password"></div>
+                </li>
+                <li class="form-content">
+                    <span>* 再次输入新的支付密码</span>
+                    <i class="imgfont img-notice" id="sixDigTip3" data-id="tipPop"></i>
+                    <div id="sixDig3" class="password"></div>
+                </li>
+            </ul>
+            <div class="button-group">
+                <button class="button-event-large-blue" id="modify">重置</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+</footer>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/setVerificationTip.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/safety-reset-pay.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/safety-reset-pay.js"></script>
+</body>
+</html>

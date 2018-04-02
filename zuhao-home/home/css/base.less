@@ -1,0 +1,724 @@
+@color-red: #d7063b;
+@color-deep-gray: #9a9a9a;
+@color-middle-gray: #e2e2e2;
+@color-light-gray: #f4f4f4;
+.state-text-normal{
+  color: #1E9FFF;
+}
+.state-text-warm {
+  color: #ff7373;
+}
+.state-text-unknown{
+  color: #f0ad4e;
+}
+.state-text-base{
+  color: #525252;
+}
+.text-red {
+  color: @color-red !important;
+}
+
+.text-limit {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:block;
+}
+
+
+input[type=checkbox] {
+  position: relative;
+  width: 10px;
+  height: 1px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+input[type=checkbox]::before{
+  content:'';
+  position: absolute;
+  top: -12px;
+  left: -6px;
+  width: 14px;
+  height: 14px;
+  line-height:14px;
+  text-align: center;
+  color:#666666;
+  font-size:16px;
+  border: 1px solid #ebedf3;
+  background-color: #fff;
+  border-radius: 4px;
+}
+input[type=checkbox]:checked::before {
+  color:#fff;
+  background-color:@color-red;
+  content: '✔';
+}
+
+
+
+.img.img-up{
+  background: url("../images/zudahao.png");
+  background-repeat: no-repeat;
+  background-position: -318px 0;
+}
+.img.img-down{
+  background: url("../images/zudahao.png");
+  background-repeat: no-repeat;
+  background-position: -318px -9px;
+}
+//所有居中
+.header-wrap, .search, .banner-wrap, .change, .picture {
+  font-family: "Microsoft YaHei", serif;
+  width: 1190px;
+  margin: 0 auto;
+}
+//头部灰色导航
+.header {
+  width: 100%;
+  height: 35px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid @color-middle-gray;
+  color: #666;
+  font-size: 12px;
+  .header-opacity {
+    float: left;
+    > ul > li {
+      float: left;
+      line-height: 36px;
+      padding: 0 10px;
+    }
+    a {
+      color: #666;
+      font-family: "Microsoft YaHei", serif;
+      &:hover {
+        color: @color-red;
+        text-decoration: none;
+      }
+    }
+
+  }
+  .header-nav {
+    float: right;
+    > ul > li:nth-child(even) {
+      font-size: 14px;
+      color: #ddd;
+    }
+    > ul > li:nth-child(odd) {
+      cursor: pointer;
+    }
+    .header-hover:hover {
+      background-color: #ffffff;
+      border-left: 1px solid @color-middle-gray;
+      border-right: 1px solid @color-middle-gray;
+      .iconfont:before {
+        content: "\e603";
+      }
+    }
+    > ul > li {
+      position: relative;
+      float: left;
+      height: 35px;
+      line-height: 35px;
+      border-left: 1px solid #f7f7f7;
+      border-right: 1px solid #f7f7f7;
+      > span {
+        padding: 0 6px;
+      }
+      > span:hover {
+        color: @color-red;
+      }
+    }
+    i.iconfont {
+      font-size: 12px;
+      padding-left: 8px;
+      padding-top: 2px;
+    }
+    .img.img-game {
+      width: 18px;
+      height: 36px;
+      float: left;
+      background: url('../images/zudahao.png');
+      background-repeat: no-repeat;
+      background-position: -447px -20px;
+    }
+  }
+  .header-nav-info {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    border: 1px solid @color-middle-gray;
+    border-top: none;
+    background-color: #ffffff;
+    width: 230px;
+    padding: 10px;
+    top: 35px;
+    left: -1px;
+    > a {
+      line-height: 70px;
+      color: #000000;
+      font-weight: 600;
+      margin-left: 12px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    > img {
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+      float: left;
+    }
+    > ul {
+      margin-top: 20px;
+      overflow: hidden;
+      > li {
+        width: 50%;
+        float: left;
+        line-height: 26px;
+        > a {
+          color: @color-deep-gray;
+          &:hover {
+            color: @color-red;
+          }
+        }
+      }
+    }
+  }
+
+  .header-nav-info2 {
+    width: 100%;
+    > ul {
+      margin-top: 0;
+      > li {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//搜索栏
+.search {
+  //overflow: hidden;
+  color: @color-deep-gray;
+  .logo {
+    float: left;
+    height: 170px;
+    width: 200px;
+    overflow: hidden;
+    img {
+      margin-top: 66px;
+    }
+  }
+  .search-box {
+    float: left;
+    margin-left: 60px;
+    margin-top: 66px;
+  }
+  .search-tab {
+    width: 658px;
+  }
+  .search-tab-title {
+    width: 100%;
+    overflow: hidden;
+    li {
+      color: #666;
+      font-size: 12px;
+      float: left;
+      height: 22px;
+      line-height: 22px;
+      padding: 0 10px;
+      cursor: pointer;
+      background-color: @color-light-gray;
+    }
+    li.active {
+      background-color: @color-red;
+      color: #ffffff;
+    }
+  }
+  .search-tab-box {
+    width: 630px;
+    height: 34px;
+    border: 3px solid @color-red;
+    border-radius: 0 4px 4px 4px;
+    input {
+      height: 29px;
+      line-height: 30px;
+      color: #666;
+      font-size: 12px;
+      border: 1px solid #ffffff;
+      padding-left: 10px;
+    }
+    .zizone, .shop {
+      float: left;
+      display: none;
+    }
+    .zizone.active, .shop.active {
+      display: block;
+    }
+  }
+  .zizone {
+    width: 519px;
+    font-size: 12px;
+    >div {
+      display: inline-block;
+      margin-top: 2px;
+      padding: 0 4px 0 6px;
+      color: #666;
+      cursor: pointer;
+      &:hover >span{
+        color: @color-red;
+      }
+    }
+    i.img {
+      width: 20px;
+      height: 12px;
+      border-right: 1px solid #e2e2e2;
+      padding-right: 4px;
+      display: inline-block;
+    }
+    input {
+      width: 185px;
+    }
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 12px;
+    color: #9a9a9a;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 12px;
+    color: #9a9a9a;
+  }
+  input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #9a9a9a;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #9a9a9a;
+  }
+  .shop input {
+    width: 516px;
+  }
+  .search-btn {
+    background-color: @color-red;
+    color: #ffffff;
+    width: 100px;
+    float: right;
+    height: 100%;
+    border: 1px solid @color-red;
+  }
+  .search-help {
+    li {
+      float: left;
+      padding-left: 10px;
+    }
+    a {
+      line-height: 26px;
+      font-size: 12px;
+      color: @color-deep-gray;
+      &:hover {
+        color: @color-red;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+//nav-banner
+.nav{
+  border-bottom: 3px solid #393939;
+  .nav-wrap {
+    width: 1190px;
+    margin: 0 auto;
+  }
+  .banner-lists {
+    height: auto;
+    #banner-all-game{
+      &:hover {
+        background-color: @color-red;
+      }
+    }
+  }
+  .banner-change-nav {
+    float: left;
+  }
+  .banner-change-nav li{
+    float: left;
+    color: #000000;
+    font-size: 13px;
+    padding-left: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      color: @color-red;
+    }
+  }
+}
+//游戏大区分类 二级菜单
+.game-zizone {
+  display: none;
+  border: 1px solid @color-red;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 3;
+  left: 249px;
+  top: 39px;
+  width: 680px;
+  min-height: 381px;
+  padding: 10px;
+  >li {
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 44px;
+    >span{
+      font-weight: 600;
+    }
+    >ul {
+      border-top: 1px dotted @color-red;
+      overflow: hidden;
+      width: 100%;
+      >li{
+        font-weight: normal;
+        width: 65px;
+        float: left;
+        line-height: 26px;
+        margin-right: 10px;
+        cursor: pointer;
+        >a{
+          color: #333333;
+          &:hover {
+            cursor: pointer;
+            color: @color-red;
+          }
+        }
+      }
+    }
+  }
+}
+.banner-lists {
+  position: relative;
+  float: left;
+  width: 250px;
+  //height: 443px;
+  font-size: 13px;
+  > div {
+    height: 40px;
+    line-height: 40px;
+    background-color: @color-red;
+    color: #ffffff;
+    text-align: center;
+  }
+  .game-lists{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 405px;
+  }
+  .game-lists>li {
+    padding-left: 80px;
+    height: 44px;
+    //width: 170px;
+    cursor: pointer;
+    line-height: 44px;
+    color: #ffffff;
+    i.iconfont {
+      font-size: 14px;
+      padding-right: 8px;
+    }
+    &:hover{
+      background-color: @color-red;
+      >span {
+        color: #ffffff;
+        transition: 0.5s;
+        margin-left: 18px;
+      }
+    }
+  }
+  .game-lists>li.game-lists-active{
+    background-color: @color-red;
+    >span {
+      color: #ffffff;
+      transition: 0.5s;
+      margin-left: 18px;
+    }
+  }
+}
+
+//热门
+i.img.img-tophot {
+  position: absolute;
+  background: url('../images/zudahao.png');
+  background-repeat: no-repeat;
+  background-position: -372px -0px;
+  width: 31px;
+  height: 23px;
+  right: 0;
+  top: -10px;
+  display: inline-block;
+}
+//密码六个小框
+#mockInput {
+  cursor: text;
+  background: #fff;
+  outline: none;
+  position: relative;
+  padding: 8px 0;
+  height: 24px;
+  top: -42px;
+  border: 1px solid #ebedf3;
+  border-radius: 4px;
+}
+#mockInput i {
+  float: left;
+  display: block;
+  padding: 10px 0;
+  height: 7px;
+  border-right: 1px solid #ebedf3;
+}
+#mockInput i:last-child {
+  border-right: none;
+}
+#mockInput .highLight {
+  display: inline-block;
+  position: absolute;
+  z-index: 999;
+  width: 36px;
+  height: 40px;
+  left: 1px;
+  top: 0px;
+  box-shadow: 0 0 5px #1E9FFF;
+  transition: left 0.3s;
+}
+#mockInput .highLight i {
+  width: 1px;
+  height: 0;
+  position: absolute;
+  border-left: 1px solid #1E9FFF;
+  left: 17px;
+  top: 12px;
+}
+#mockInput i b {
+  display: block;
+  margin: 0 auto;
+  width: 7px;
+  height: 7px;
+  overflow: hidden;
+}
+#mockInput i b.active {
+  display: block;
+  margin: 0 auto;
+  width: 7px;
+  height: 7px;
+  overflow: hidden;
+  background-color: #525252;
+  border-radius: 50%;
+}
+//轮播
+.carouselBox {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.carouselBox .carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.carouselBox .carousel {
+  position: relative;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselBox .carousel_pager_box {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  bottom: 10px;
+  width: 150px;
+  right: 10px;
+  text-align: center;
+  z-index: 2;
+}
+
+.carouselBox .carousel_pager {
+  display: inline-block;
+  /*margin:0 auto;*/
+}
+
+.carouselBox .carousel_pager b {
+  float: left;
+  display: block;
+  background: #27272b;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.carouselBox .carousel_pager b.curr {
+  background: #d7063b;
+}
+
+.carouselBox .carousel li.curr {
+  z-index: 1;
+  opacity: 1;
+}
+
+.carouselBox .carousel li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: all linear .5s;
+  background: no-repeat center 0;
+}
+
+.carouselBox .carousel_button .next {
+  margin-left:311px ;
+}
+
+.carouselBox .carousel_button .prev {
+  left: 0;
+}
+
+
+.carouselBox .carousel_button a:hover {
+  opacity: 0.4;
+}
+
+.carouselBox .carousel_button a {
+  display: block;
+  width: 28px;
+  height: 62px;
+  line-height: 62px;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  margin-top: -31px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: SimSun;
+  filter: alpha(opacity=20);
+  -webkit-transition: opacity .2s linear 0s;
+  transition: opacity .2s linear 0s;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  text-decoration:none;
+}
+
+/*这个是游戏下拉框*/
+.game-select {
+  background-color: #ffffff;
+  border: 3px solid @color-red;
+  border-top: none;
+  border-radius: 4px;
+  z-index: 12;
+  cursor: auto;
+  left:-3px;
+  top:32px;
+  ul {
+    width: 100%;
+    height: 40px;
+    background-color: #f7f7f7;
+    li {
+      line-height: 40px;
+      text-align: center;
+      width: 33%;
+      height: 100%;
+      float: left;
+      cursor: pointer;
+    }
+    .active {
+      background-color: #ffffff;
+    }
+  }
+  .game-select-item {
+    background-color: #ffffff;
+    .shortening, .item-name {
+      width: 100%;
+      //margin-bottom: 10px;
+    }
+    i {
+      margin-left: 10px;
+      display: inline-block;
+      margin-top: 8px;
+      cursor: pointer;
+      padding: 1px 2px;
+      &:hover {
+        color: @color-red;
+      }
+    }
+    i.active {
+      background-color: @color-red;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+    .curr {
+      //background-color: @color-deep-gray;
+      color: @color-red;
+      border-radius: 4px;
+    }
+    input {
+      display: block;
+      margin: 10px auto;
+      width: 95%;
+      border: 1px solid #F0F0F0;
+    }
+  }
+}
+
+.clearBoth:after {
+  visibility: hidden;
+  content: " ";
+  height: 0;
+  display: block;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+

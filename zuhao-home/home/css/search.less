@@ -1,0 +1,442 @@
+@import "color";
+
+@color-red: #d7063b;
+
+.container {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+//一大堆的选择
+.select {
+  width: 100%;
+  color: #666666;
+  font-size: 12px;
+  > li {
+    overflow: hidden;
+    border: 1px dotted #E9E9E9;
+    border-bottom: none;
+    background-color: #F4F4F4;
+    &:last-child {
+      border-bottom: 1px solid #E9E9E9;
+    }
+  }
+  span {
+    line-height: 20px;
+    color: #9A9A9A;
+    float: left;
+    width: 140px;
+    padding: 18px 12px 18px 0;
+    text-align: right;
+  }
+  #gameBox {
+    li {
+      margin: 0;
+      border: 1px solid #ddd;
+      margin-top: -1px;
+      margin-left: -1px;
+      height: 57px;
+      width: 109px;
+    }
+    li{
+      background-color: #ffffff;
+    }
+    i.img.active {
+      border: 2px solid #D7063B;
+      background-color: #ffffff;
+    }
+  }
+  i.img {
+    float: left;
+    background-color: #ffffff;
+    width: 104px;
+    height: 53px;
+    background-image: url("../images/zudahao.png");
+    background-repeat: no-repeat;
+    &:hover {
+      background-color: #ffffff;
+      text-align: center;
+      background-image: none;
+      border: 2px solid #D7063B;
+      width: 104px;
+      height: 51px;
+      line-height: 48px;
+    }
+  }
+  .img.img-lol {
+    background-position: 0 -93px;
+    &:hover:before {
+      content: "英雄联盟";
+    }
+  }
+  .img.img-cf {
+    background-position: -110px -93px;
+    &:hover:before {
+      content: "穿越火线";
+    }
+  }
+  .img.img-cs {
+    background-position: -220px -93px;
+    &:hover:before {
+      content: "反恐精英OL";
+    }
+  }
+  .img.img-qiangshen {
+    background-position: -330px -93px;
+    &:hover:before {
+      content: "枪神纪";
+    }
+  }
+  .img.img-nizhan {
+    background-position: -440px -93px;
+    &:hover:before {
+      content: "逆战";
+    }
+  }
+  .img.img-shou {
+    background-position: -550px -93px;
+    &:hover:before {
+      content: "守望先锋";
+    }
+  }
+  .img.img-battle {
+    background-position: -660px -93px;
+    &:hover:before {
+      content: "绝地求生";
+    }
+  }
+  .img.img-qianghuo {
+    background-position: -770px -93px;
+    &:hover:before {
+      content: "枪火游侠";
+    }
+  }
+  .img.img-qqfeiche {
+    background-position: 0 -148px;
+    &:hover:before {
+      content: "QQ飞车";
+    }
+  }
+  .img.img-h1z1 {
+    background-position: -110px -148px;
+    &:hover:before {
+      content: "H1Z1";
+    }
+  }
+  div {
+    background-color: #ffffff;
+    width: 1015px;
+    float: left;
+    padding: 18px 0 18px 20px;
+  }
+  #gameZone {
+    li {
+      width: 66px;
+      text-align: center;
+    }
+  }
+
+  ul {
+    background-color: #ffffff;
+    width: 1015px;
+    float: left;
+    padding: 16px 0 16px 20px;
+    li.active {
+      background-color: @color-red;
+      color: #ffffff;
+    }
+    li {
+      margin-right: 26px;
+      float: left;
+      line-height: 20px;
+      cursor: pointer;
+      border: 1px solid #ffffff;
+      padding: 1px 2px;
+      &:hover {
+        border: 1px solid #d7063b;
+      }
+
+    }
+    input {
+      border: 1px solid #E9E9E9;
+      width: 30px;
+      height: 16px;
+      color: #6c6c6c;
+      text-align: center;
+      margin: 0 5px;
+    }
+    button {
+      display: inline-block;
+      margin-right: 10px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      cursor: pointer;
+      color: #6c6c6c;
+      font-size: 12px;
+    }
+  }
+}
+
+//表格标题 内容
+.product-title {
+  color: #666;
+  width: 100%;
+  height: 36px;
+  margin: 10px 0;
+  font-size: 12px;
+  overflow: hidden;
+  ul {
+    width: 550px;
+  }
+
+  li.active {
+    background-color: #d3d3d3;
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  li {
+    position: relative;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    border-left: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    float: left;
+    width: 60px;
+    &:first-child {
+      border-left: 1px solid #E9E9E9;
+      width: 128px;
+    }
+    &:hover {
+      //color: #D7063B;
+    }
+    i.img {
+      position: absolute;
+      width: 20px;
+      height: 12px;
+      padding-right: 4px;
+      display: inline-block;
+    }
+
+    .img.img-up-red {
+      background: url("../images/zudahao.png");
+      background-repeat: no-repeat;
+      background-position: -337px 0;
+    }
+    .img.img-down-red {
+      background: url("../images/zudahao.png");
+      background-repeat: no-repeat;
+      background-position: -337px -9px;
+    }
+    .img-up {
+      right: 1px;
+      top: 11px;
+    }
+    .img-up-red {
+      right: -4px;
+      top: 11px;
+    }
+    .img-down {
+      right: 1px;
+      top: 6px;
+    }
+    .img-down-red {
+      right: -4px;
+      top: 6px;
+    }
+  }
+  .product-title-select {
+    float: left;
+    margin-left: 100px;
+    line-height: 36px;
+    label:hover {
+      color: @color-red;
+    }
+  }
+  .product-title-num {
+    float: right;
+    line-height: 36px;
+    i {
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px 5px;
+      margin: 0 10px;
+      text-align: center;
+      background-color: #F9F9F9;
+      border: 1px solid #E9E9E9;
+    }
+    i.ban {
+      background-color: #E9E9E9;
+      pointer-events: none !important;
+    }
+  }
+}
+
+.product {
+  background-color: @color-font-white;
+  width: 100%;
+  min-width: 1130px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid @color-light-default;
+}
+
+.product-item {
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  color: @color-font-deep;
+}
+
+.product-item .title {
+  height: 42px;
+  line-height: 42px;
+}
+
+.product-item .title span {
+  padding-left: 14px;
+}
+
+.product-item .title button {
+  margin-left: 60px;
+}
+
+.product-item .product-item-info {
+  height: 100%;
+}
+
+.product-item .product-item-info > li {
+  float: left;
+  height: 120px;
+  line-height: 100%;
+  overflow: hidden;
+  //border-right: 1px solid @color-light-default;
+}
+
+.product-item .product-item-info > li:first-child {
+  width: 35%;
+}
+
+.product-item .product-item-info > li:nth-child(2) {
+  width: 25%;
+}
+
+.product-item .product-item-info > li:nth-child(3) {
+  width: 25%;
+}
+
+.product-item .product-item-info > li:last-child {
+  width: 14%;
+  border-right: none;
+}
+
+.product-item-info-item {
+  height: 100%;
+  padding: 10px;
+  > .equip > i {
+    color: #E6E6E6;
+    font-size: 12px;
+    padding-right: 10px;
+    line-height: 21px;
+  }
+  .img.img-note {
+    display: inline-block;
+    width: 19px;
+    height: 15px;
+    background: url("../images/zudahao.png") no-repeat -339px -23.6px;
+  }
+}
+
+.compensate > i {
+  padding: 2px 3px;
+  background-color: #5cb85c;
+  color: #ffffff;
+  margin-right: 10px;
+  line-height: 36px;
+  border: 1px solid #479447;
+}
+
+.h-money {
+  margin-top: 24px;
+}
+
+.product-item-info-item li {
+  line-height: 20px;
+  a {
+    color: #4CC2FF;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.product-item-info-item button {
+  margin-top: 38px;
+  width: 92px;
+  height: 30px;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #45ABE0;
+  line-height: 30px;
+  background-color: #4CC2FF;
+}
+
+.product-notice {
+  li {
+    box-sizing: border-box;
+    float: left;
+    padding-left: 10px;
+  }
+  li:first-child {
+    width: 61.5%;;
+  }
+  li:nth-child(2) {
+    width: 17%;
+  }
+  li:last-child {
+    width: 19%;
+  }
+  i.imgfont {
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+//没有搜索到
+.product-undefined {
+  padding: 10px;
+  color: #000000;
+  width: 1168px;
+  height: 80px;
+  line-height: 26px;
+  font-weight: 600;
+  background-color: #FFF8F6;
+  border: 1px solid #E9E9E9;
+  .img-undefined {
+    display: inline-block;
+    width: 124px;
+    height: 85px;
+    background: url("../images/zudahao.png");
+    background-repeat: no-repeat;
+    background-position: -535px -8px;
+    margin-left: 18px;
+  }
+  div {
+    width: 1000px;
+    float: right;
+  }
+  i, a {
+    color: #790103;
+  }
+
+}

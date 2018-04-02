@@ -1,0 +1,135 @@
+.way-self {
+  background-color: #f0ad4e;
+  padding: 3px 13px;
+  color: #fff;
+}
+.way-terrace {
+  background-color: #5cb85c;
+  padding: 3px 13px;
+  color: #fff;
+}
+.game-info {
+  color: #1E9FFF;
+}
+.product-title {
+  width: 100%;
+  border: 1px solid #ebedf3;
+  height: 30px;
+  margin: 10px 0;
+}
+.product-title li {
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  float: left;
+  border-right: 1px solid #ebedf3;
+}
+.product-title li:first-child {
+  width: 29%;
+}
+.product-title li:nth-child(2) {
+  width: 17%;
+}
+.product-title li:nth-child(3) {
+  width: 17%;
+}
+.product-title li:nth-child(4) {
+  width: 18%;
+}
+.product-title li:last-child {
+  width: 18.3%;
+  border-right: none;
+}
+.product {
+  background-color: #fff;
+  width: 100%;
+  min-width: 1130px;
+  min-height: 182px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #ebedf3;
+}
+.product-item {
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  color: #525252;
+}
+.product-item .title {
+  height: 42px;
+  line-height: 42px;
+}
+.product-item .title > ul > li > span {
+  padding-left: 14px;
+}
+.product-item .title button {
+  margin-left: 60px;
+}
+.product-item .product-item-info {
+  height: 100%;
+}
+.product-item .product-item-info > li {
+  float: left;
+  height: 100%;
+  line-height: 100%;
+  overflow: auto;
+  border-right: 1px solid #ebedf3;
+}
+.product-item .product-item-info > li:first-child {
+  width: 29%;
+}
+.product-item .product-item-info > li:nth-child(2) {
+  width: 17%;
+}
+.product-item .product-item-info > li:nth-child(3) {
+  width: 17%;
+}
+.product-item .product-item-info > li:nth-child(4) {
+  width: 18%;
+}
+.product-item .product-item-info > li:last-child {
+  width: 17%;
+  border-right: none;
+}
+.product-item-info-item {
+  min-height: 162px;
+  height: 100%;
+  padding: 4px;
+}
+.product-item-info-item li {
+  padding: 7px 10px 7px 10px;
+}
+.product-item-info-item li > button {
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+.product-notice li {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 10px;
+}
+.product-notice li:first-child {
+  width: 61.5%;
+}
+.product-notice li:nth-child(2) {
+  width: 18%;
+}
+.product-notice li:last-child {
+  width: 18%;
+}
+.product-notice i.imgfont {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+}
+.product-notice .img-filter {
+  background: url("../images/zudahao-all-logo.png") no-repeat -4px -176px;
+}
+.product-notice .img-chat {
+  background: url("../images/zudahao-all-logo.png") no-repeat -26px -176px;
+}
+.product-notice .img-black {
+  background: url("../images/zudahao-all-logo.png") no-repeat -45px -176px;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>管理宝贝</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+    <style>
+        .text-limit8{
+            white-space: nowrap;
+            width: 8em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            height: 42px;
+            text-align: right;
+            vertical-align: bottom;
+        }
+        .text-limit4{
+            white-space: nowrap;
+            width: 4em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            height: 42px;
+            text-align: right;
+            vertical-align: bottom;
+        }
+        .ta-l{
+            text-align: left!important;
+        }
+        .ta-r{
+            text-align: right!important;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>宝贝管理</span> / <span>管理宝贝</span>
+        </div>
+        <!--多框搜索-->
+        <div class="search-bg multi-search show">
+            <ul>
+                <li class="multi-search-item">
+                    <span>产品关键词</span>
+                    <i class="imgfont img-question" id="keywordNotice"></i>
+                    <input type="text" placeholder="请输入产品编号、账号别名或产品标题"  id="keyword">
+                </li>
+                <li class="multi-search-item">
+                    <span>产品状态</span>
+                    <i class="imgfont img-question" id="stateNotice"></i>
+                    <div id="state" class="borderAll"><div class="select_text"></div></div>
+                </li>
+                <li class="multi-search-item">
+                    <span>游戏分类和大区</span>
+                    <i class="imgfont img-question" id="gameNotice"></i>
+                    <div style="display: inline-block;position: relative;" class="gameBoxBorder">
+                        <div class="game-select" id="game-select" style="display: none;"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>账号类型</span>
+                    <i class="imgfont img-question" id="accountTypeNotice"></i>
+                    <div id="accountType" class="borderAll">
+                        <div class="select_text"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>游戏账号</span>
+                    <i class="imgfont img-question" id="gameAccountNotice"></i>
+                    <input type="text" placeholder="请输入游戏的登录账号" id="gameAccount">
+                </li>
+                <li class="multi-search-item">
+                    <span>游戏角色名称</span>
+                    <i class="imgfont img-question" id="gameRoleNotice"></i>
+                    <input type="text" placeholder="请输入游戏中的角色昵称" id="gameRole">
+                </li>
+                <li class="multi-search-item">
+                    <span>客户联系方式</span>
+                    <i class="imgfont img-question" id="userWayNotice"></i>
+                    <input type="text" placeholder="客户的联系方式" id="userWay">
+                </li>
+                <li class="multi-search-item">
+                    <span>客户支付账号</span>
+                    <i class="imgfont img-question" id="payAccountNotice"></i>
+                    <input type="text" placeholder="请输入客户支付账号" id="payAccount">
+                </li>
+                <li class="multi-search-item-single ">
+                    <button class="button-event-middle-blue" id="search">搜索订单</button>
+                    <button class="button-event-middle-white" data-id="clearSearch">重置搜索条件</button>
+                </li>
+            </ul>
+        </div>
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">所有状态</li>
+                <li>正常所有</li>
+                <li>正常可租</li>
+                <li>正常已租</li>
+                <li>待编辑</li>
+                <li>等待审核</li>
+                <li>下架</li>
+                <a class="line"></a>
+            </ul>
+        </div>
+        <!--表格-->
+        <div class="table-wrap">
+        <table class="table-main">
+            <thead>
+            <tr>
+                <th>产品序号</th>
+                <th>状态</th>
+                <th>游戏</th>
+                <th>标题</th>
+                <th>大区</th>
+                <th>别名</th>
+                <th>未结算（元）</th>
+                <th>累计获利（元）</th>
+                <th>商家分成</th>
+                <th>时租<i class="iconfont img-question"></i></th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery.loading.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/selected.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/jQuery.Hz2Py-min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/modifyPop.js"></script>
+
+<script src="http://zudahao.zudahao.com/agents2/js/product-manage.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/product-manage.js"></script>
+<!--页面表格内容-->
+<script  id="tbodyTemplate" type="text/html">
+    {{ if agentsProductDtos.length !== 0 }}
+    {{each agentsProductDtos as item i}}
+    <tr data-id="{{ item.productId}}">
+        <td>{{ item.productId}}</td>
+        <!--状态-->
+        <td class="state">
+            {{if item.state == 1 }}正常可租
+            {{else if item.state == 2 }}正常已租
+            {{else if item.state == 3 }}待编辑
+            {{else if item.state == 4 }}等待审核
+            {{else if item.state == 5 }}下架
+            {{/if }}
+        </td>
+        <!--英雄联盟-->
+        <td class="state-text-normal">
+            {{ stringSplit(item.ziZoneName ,'/')[0]}}
+        </td>
+        <td class="text-limit12" title="{{ item.productTitle}}">{{ item.productTitle}}</td>
+        <!--电信 黑色玫瑰-->
+        <td class="ta-l">
+            <span class="text-limit4 ta-r">
+                {{ stringSplit(item.ziZoneName ,'/')[1]}}
+            </span>
+            <span class="text-limit4 ta-l">
+                {{ stringSplit(item.ziZoneName ,'/')[2]}}
+            </span>
+        </td>
+        <!--别名-->
+        <td>
+            <div class="text-limit8 ta-r">
+                {{ item.nickName }}
+            </div>
+            {{ if item.state != 4  }}
+            <i class="iconfont icon-info" id="editNickname"></i>
+            {{ else }}
+            <i class="iconfont"></i>
+            {{ /if }}
+        </td>
+        <!--未结算（元）-->
+        <td>{{ item.noPayMoney }}</td>
+        <!--累计获利（元）-->
+        <!--parseFloat(item.totalMoney * item.rate / 100).toFixed(1) -->
+        <td>{{item.totalMoney}}</td>
+        <!--商家分成-->
+        <td>{{ item.rate }}%</td>
+        <!--时租-->
+        <td>
+            <div class="text-limit4"> {{ item.adminHrental }}</div>
+            <div class="editHRent" style="display: inline-block;">
+                <span><i class="iconfont icon-ellipsis"></i></span>
+            </div>
+        </td>
+        <!--操作-->
+        <td>
+            {{ if item.state !== 3 && item.state !== 4 && item.state !== 5 }}
+            <button class="button-event-small-blue"><a href="product-order.html?productId={{ item.productId }}" target="_blank">下单</a></button>
+            {{ /if }}
+            {{ if item.state != 4  }}
+            <button class="button-event-small-blue"><a href="product-editAccount.html?productId={{ item.productId }}&state={{ item.state }}&type={{ item.productType }}" target="_blank">编辑</a></button>
+            {{ if item.productType == 1 }}
+            <button class="button-event-small-blue" id="editPass">改密</button>
+            {{ /if }}
+            {{ /if }}
+
+            {{if item.state == 1 || item.state == 2 }}<button class="button-event-small-blue" id="down">下架</button>
+            {{else if item.state == 5 }}<button class="button-event-small-blue" id="up">上架</button>
+            {{else if item.state == 4 }}<button class="button-event-small-blue" id="quitCheck">取消审核</button>
+            {{else if item.state == 3 }}<button class="button-event-small-blue" id="postCheck">提交审核</button>
+            {{ /if}}
+
+            {{if item.state != 2 && item.productType == 1 }}
+            <button class="button-event-small-blue" id="delete">删除</button>
+            {{/if}}
+        </td>
+    </tr>
+    {{/each}}
+    {{ else }}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>店铺黑名单</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+</head>
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>防护中心</span> / <span>店铺黑名单</span>
+        </div>
+        <!--单框搜索-->
+        <div class="search-bg single-search">
+            <span>快速搜索</span>
+            <i class="imgfont img-question"></i>
+            <input type="text" placeholder="请输入要搜索的账号"  id="searchword">
+            <button class="button-event-middle-blue search" id="search">搜索</button>
+            <button class="button-other" id="addNew"><i class="iconfont icon-add"></i> 创建新的黑名单</button>
+        </div>
+        <!--表格-->
+        <div class="table-wrap">
+            <table class="table-main">
+                <thead>
+                <tr>
+                    <th>账号类型</th>
+                    <th>账号</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+
+
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/setVerificationTip.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+
+<script src="http://zudahao.zudahao.com/agents2/js/protect-shop-blacklist.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/protect-shop-blacklist.js"></script>
+
+<!--页面表格内容-->
+<script id="tbodyTemplate" type="text/html">
+    {{ if agentsBlacks.length!==0}}
+    {{each agentsBlacks as item i}}
+    <tr data-id="{{ item.agentsBlackId }}">
+        <td>
+            {{ if item.blackAccountType == 1 }}手机号
+            {{ else if item.blackAccountType == 2 }}QQ号
+            {{ else if item.blackAccountType == 3 }}微信账号
+            {{ else if item.blackAccountType == 4 }}支付宝账号
+            {{ else if item.blackAccountType == 5 }}mac地址
+            {{ else if item.blackAccountType == 6 }}平台账号名
+            {{ /if }}
+        </td>
+        <td>
+            {{ if item.blackAccountType == 6 }}
+                <a href="trade-manage.html?userAccount={{item.blackAccount}}" target="_blank" class="state-text-warm">{{ item.blackAccount }}</a>
+            {{ else }}
+            {{ item.blackAccount }}
+            {{ /if}}
+        </td>
+        <td>{{ item.addTime }}</td>
+        <td>
+            <button class="button-event-small-blue" id="delete">删除</button>
+        </td>
+    </tr>
+    {{/each}}
+    {{ else}}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{/if}}
+</script>
+
+<!--添加店铺黑名单-->
+<section class="pop-bg hide">
+    <div class="message-pop pop">
+        <!--关闭按钮-->
+        <div class="pop-title">
+            <i class="iconfont icon-close"></i>
+        </div>
+        <!--表单-->
+        <div class="form">
+            <ul>
+                <li class="form-content">
+                    <span>* 账号类型</span>
+                    <i class="imgfont img-question" id="accountTypeTip"></i>
+                    <div id="accountType">
+                        <div class="select_text borderAll"></div>
+                    </div>
+                </li>
+                <li class="form-content">
+                    <span>* 账号</span>
+                    <i class="imgfont img-notice" id="accountTip" data-id="tipPop"></i>
+                    <input type="text" placeholder="填写账号" id="account">
+                </li>
+            </ul>
+            <div class="button-group">
+                <button class="button-event-large-gray cancel">取消</button>
+                <button class="button-event-large-blue" id="confirm">创建黑名单</button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

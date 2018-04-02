@@ -1,0 +1,15 @@
+.form-table{
+    width: 100%;
+    overflow: hidden;
+}
+.form {
+    width: 40%;
+    float: left;
+}
+.table-wrap{
+    width: 58%;
+    float: left;
+}
+table.table-main{
+    min-width: 0;
+}

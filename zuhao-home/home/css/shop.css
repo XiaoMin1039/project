@@ -1,0 +1,129 @@
+.shop-info {
+  font-size: 13px;
+  float: left;
+  margin-top: 66px;
+}
+.shop-info .shop-name {
+  width: 150px;
+  line-height: 20px;
+  text-align: center;
+  border-right: 1px solid #DEDEDE;
+  float: left;
+}
+.shop-info .shop-name > span:first-child {
+  color: #000000;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 4px;
+}
+.shop-info .shop-name > span:last-child {
+  background-color: #F4C985;
+  border: 1px solid #E7BA77;
+  border-radius: 2px;
+  color: #856667;
+  padding: 0 9px;
+}
+.shop-info .shop-level {
+  float: left;
+  color: #999999;
+  padding: 4px 20px;
+}
+.shop-info .shop-level > span:first-child {
+  display: block;
+  padding-bottom: 10px;
+}
+.shop-img {
+  width: 100%;
+  background-color: #d7063b;
+}
+.shop-img img {
+  width: 1920px;
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+.shop-nav {
+  width: 100%;
+  height: 30px;
+  background-color: #383838;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 30px;
+}
+.shop-nav li {
+  float: left;
+  padding-right: 26px;
+  cursor: pointer;
+}
+.shop-nav li:hover {
+  color: #d7063b;
+}
+.shop-nav .shop-wrap {
+  width: 1190px;
+  margin: 0 auto;
+}
+.shop-nav .shop-wrap > ul:first-child {
+  float: left;
+}
+.shop-nav .shop-wrap > ul:last-child {
+  float: right;
+}
+.notice {
+  overflow: hidden;
+  padding: 10px;
+  height: 94px;
+  font-size: 13px;
+  color: #050505;
+  background-color: #FFF5D3;
+  position: relative;
+}
+.notice ul {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+.notice ul li {
+  height: 27px;
+}
+.connect {
+  position: fixed;
+  right: 50px;
+  top: 390px;
+  width: 180px;
+  color: #666666;
+  font-size: 12px;
+  border: 1px solid #E9E9E9;
+  background-color: #ffffff;
+}
+.connect .connect-title {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #E9E9E9;
+  padding-left: 12px;
+}
+.connect .connect-qq {
+  height: 200px;
+}
+.connect .connect-like {
+  overflow: hidden;
+  height: 43px;
+  width: 100%;
+}
+.connect .connect-like i.iconfont {
+  color: #666666;
+  float: left;
+  text-align: center;
+  width: 87px;
+  height: 41px;
+  font-size: 22px;
+  line-height: 41px;
+  border: 1px solid #E9E9E9;
+}
+.connect .connect-like i.icon-star {
+  font-size: 18px;
+}
+.connect .connect-like .icon-totop:hover,
+.connect .connect-like .icon-star:hover {
+  color: #f0ad4e;
+}

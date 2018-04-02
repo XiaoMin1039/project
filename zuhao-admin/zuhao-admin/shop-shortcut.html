@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>快捷术语</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav">
+    </nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>店铺管理</span> / <span>快捷术语</span>
+        </div>
+        <!--单框搜索-->
+        <div class="search-bg single-search">
+            <button class="button-other" id="addNew"><i class="iconfont icon-add"></i> 创建一个新的术语</button>
+        </div>
+        <!--表格-->
+        <div class="table-wrap">
+            <table class="table-main">
+                <thead>
+                <tr>
+                    <th>术语编号</th>
+                    <th>别名</th>
+                    <th>内容</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/clipboard.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/selected.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/jQuery.Hz2Py-min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/setVerificationTip.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/shop-shortcut.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/shop-shortcut.js"></script>
+
+<!--页面表格内容-->
+<script id="tbodyTemplate" type="text/html">
+    {{  if object.length !== 0 }}
+    {{ each object as item i}}
+    <tr data-id="{{ item.agentsShortCutId}}">
+        <td>{{ item.agentsShortCutId}}</td>
+        <td>{{ item.nickName}}</td>
+        <td class="text-limit26">{{ item.content}}</td>
+        <td>{{ item.time | dateFormat:'yyyy-MM-dd hh:mm:ss'}}</td>
+        <td>
+            <button class="button-event-small-blue" id="look">查看</button>
+            <button class="button-event-small-blue" id="delete">删除</button>
+            <button class="button-event-small-blue" id="edit">编辑</button>
+        </td>
+    </tr>
+    {{/each}}
+    {{ else }}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+
+<!--添加快捷术语-->
+<section class="pop-bg hide">
+    <div class="message-pop pop">
+        <!--关闭按钮-->
+        <div class="pop-title">
+            <i class="iconfont icon-close"></i>
+        </div>
+        <!--表单-->
+        <div class="form">
+            <ul>
+                <li class="form-content">
+                    <span>* 模板别名</span>
+                    <i class="imgfont img-notice" id="shopNewsTitleTip" data-id="tipPop"></i>
+                    <input type="text" placeholder="请填写模板别名" id="shopNewsTitle">
+                </li>
+                <li class="form-content">
+                    <span>快捷术语</span>
+                    <i class="imgfont img-question" id="shortcut-boxTip"></i>
+                    <div class="form-item-box" id="shortcut-box">
+                        <!--<button class="button-event-small-blue">游戏名字</button>-->
+                        <!--<button class="button-event-small-blue">游戏大区</button>-->
+                        <!--<button class="button-event-small-blue">游戏子区</button>-->
+                        <!--<button class="button-event-small-blue">账号标题</button>-->
+                        <!--<button class="button-event-small-blue">账号别名</button>-->
+                        <!--<button class="button-event-small-blue">订单开始时间</button>-->
+                        <!--<button class="button-event-small-blue">订单结束时间</button>-->
+                        <!--<button class="button-event-small-blue">订单时长</button>-->
+                        <!--<button class="button-event-small-blue">激活码</button>-->
+                        <!--<button class="button-event-small-blue">店铺名</button>-->
+                        <!--<button class="button-event-small-blue">产品编号</button>-->
+                        <!--<button class="button-event-small-blue">角色名</button>-->
+                    </div>
+                </li>
+                <li class="form-content">
+                    <span>* 术语模板</span>
+                    <i class="imgfont img-notice" id="shopNewsContentTip" data-id="tipPop"></i>
+                    <textarea placeholder="请填写模板术语" id="shopNewsContent"></textarea>
+                </li>
+            </ul>
+            <div class="button-group">
+                <button class="button-event-large-blue" id="confirm">确定</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

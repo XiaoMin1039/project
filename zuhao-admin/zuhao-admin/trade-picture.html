@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>远程监控</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/lightgallery.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/trade-picture.css" rel="stylesheet">
+</head>
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav"></nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>交易管理</span> / <span>远程监控</span>
+        </div>
+        <!--单框搜索-->
+        <div class="search-bg single-search">
+            <span>多条件快速搜索 </span>
+            <i class="imgfont img-question" id="searchNotice"></i>
+            <input type="text" placeholder="可输入订单号码、上号激活码或产品标题" id="searchword">
+            <button class="button-event-middle-blue" id="search">搜索</button>
+            <button class="button-event-middle-white" data-id="clearSearch">重置搜索条件</button>
+            <button class="button-event-middle-white" id="multi-search">高级搜索</button>
+        </div>
+        <!--多框搜索-->
+        <div class="search-bg multi-search">
+            <ul>
+                <li class="multi-search-item">
+                    <span>订单关键词</span>
+                    <i class="imgfont img-question" id="orderKeywordsNotice"></i>
+                    <input type="text" placeholder="请输入订单号码、上号激活码或产品标题" id="orderKeywords">
+                </li>
+                <li class="multi-search-item">
+                    <span>产品信息关键词</span>
+                    <i class="imgfont img-question" id="productKeywordsNotice"></i>
+                    <input type="text" placeholder="请输入产品编号或账号别名" id="productKeywords">
+                </li>
+                <li class="multi-search-item">
+                    <span>游戏分类和大区</span>
+                    <i class="imgfont img-question" id="zizoneNotice"></i>
+                    <div style="display: inline-block;position: relative;" class="gameBoxBorder">
+                        <div class="game-select" id="game-select" style="display: none;"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>订单状态</span>
+                    <i class="imgfont img-question" id="stateNotice"></i>
+                    <div id="state">
+                        <div class="select_text borderAll"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>客户联系方式</span>
+                    <i class="imgfont img-question" id="linkWayNotice"></i>
+                    <input type="text" placeholder="请输入客户联系方式" id="linkWay">
+                </li>
+                <li class="multi-search-item">
+                    <span>客户支付方式</span>
+                    <i class="imgfont img-question" id="userPayWayNotice"></i>
+                    <div id="userPayWay">
+                        <div class="select_text borderAll"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>截图状态</span>
+                    <i class="imgfont img-question" id="screenStateNotice"></i>
+                    <div id="screenState">
+                        <div class="select_text borderAll"></div>
+                    </div>
+                </li>
+                <li class="multi-search-item">
+                    <span>订单时间起始</span>
+                    <i class="imgfont img-question" id="timeFrameNotice"></i>
+                    <input type="text" placeholder="请输入订单时间起始" id="timeFrameBefore">
+                </li>
+                <!--楼下这是新增的！！记得接口接口！！！-->
+                <!--<li class="multi-search-item">-->
+                <!--<span>客户账号</span>-->
+                <!--<i class="imgfont img-question" id="userAccountNotice"></i>-->
+                <!--<input type="text" placeholder="请输入客户账号！这是平台下单才有！！" id="userAccount">-->
+                <!--</li>-->
+                <li class="multi-search-item-single ">
+                    <button class="button-event-middle-blue" id="moreSearch">搜索订单</button>
+                    <button class="button-event-middle-white" data-id="clearSearch">重置搜索条件</button>
+                    <button class="button-event-middle-white" id="single-search">关闭多项搜索</button>
+                </li>
+            </ul>
+        </div>
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">所有订单</li>
+                <li>租赁中</li>
+                <li>已结束</li>
+                <a class="line"></a>
+            </ul>
+        </div>
+        <!--截图-->
+        <div class="table-wrap">
+            <div id="tbody">
+                <!--<div class="pic-item">-->
+                <!--<div class="pic-info">-->
+                <!--<div class="pic-info-details">-->
+                <!--<button class="pic-btn-white change-img-info">订单详情</button>-->
+                <!--</div>-->
+                <!--<div class="pic-info-num">-->
+                <!--总截图：100 危险：0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="pic-box">-->
+                <!--<img src="http://zudahao.zudahao.com/agents2/images/chiji.png" class="pic-box-img hide">-->
+                <!--<ul class="pic-box-info">-->
+                <!--<li><span class="pic-box-title">订单号：</span>500000068<button class="pic-btn-blue">查单</button></li>-->
+                <!--<li class="text-limit"><span class="pic-box-title">账号标题：</span>地方阿瑟地方阿瑟地方asd发的说法阿瑟地方阿瑟地方大师傅</li>-->
+                <!--<li><span class="pic-box-title">开始：</span>2017年11月12日 16:12:12</li>-->
+                <!--<li><span class="pic-box-title">结束：</span>2017年11月12日 16:12:12</li>-->
+                <!--<li><span class="pic-box-title">时长：</span>1小时</li>-->
+                <!--<li><span class="pic-box-title">剩余：</span>结束<button class="pic-btn-blue" id="goOn">续租</button></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="nick-name">-->
+                <!--别名：我的账号-->
+                <!--</div>-->
+                <!--<div class="pic-button-group">-->
+                <!--<div class="pic-button-group-left">-->
+                <!--<button class="pic-btn-white">截图</button>-->
+                <!--<button class="pic-btn-white">拦截</button>-->
+                <!--<button class="pic-btn-white">历史</button>-->
+                <!--</div>-->
+                <!--<div class="pic-button-group-right">-->
+                <!--<button class="pic-btn-blue" id="closeOrder">锁卡</button>-->
+                <!--<button class="pic-btn-blue">停卡</button>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <!--分页-->
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<footer>
+</footer>
+
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/clipboard.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/laydate/laydate.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/selected.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/jQuery.Hz2Py-min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/lightgallery-all.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/trade-diary.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/trade-picture.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/trade-picture.js"></script>
+<!--页面表格内容-->
+<script id="tbodyTemplate" type="text/html">
+    {{if screenShots.length !== 0 }}
+    {{each screenShots as item i}}
+    <div class="pic-item" data-id="{{item.orderId}}">
+        <div class="pic-info">
+            <div class="pic-info-details">
+                <button class="pic-btn-white change-img-info">订单详情</button>
+                <i class="iconfont icon-click change-img-info"></i>
+            </div>
+            <div class="pic-info-num">
+                总截图：{{ item.screenShotCount }}  &nbsp;&nbsp;危险：{{ item.unAuditScrShot }}
+            </div>
+        </div>
+        <div class="pic-box">
+            {{ if item.screenShotUrl }}
+            <img src="{{item.screenShotUrl}}?x-oss-process=image/resize,m_fixed,h_160,w_290" class="pic-box-img img-preview" id="lookpPicDetailed">
+            {{else}}
+            <img src="http://zudahao.zudahao.com/agents2/images/null.jpg" class="pic-box-img">
+            {{ /if }}
+            <ul class="pic-box-info hide">
+                <li><span class="pic-box-title">
+                    订单号：</span>{{ item.orderId}}<button class="pic-btn-blue"><a href="trade-manage.html?orderId={{ item.orderId}}" target="_blank">查单</a></button>
+                </li>
+                <li class="text-limit">
+                    <span class="pic-box-title">账号标题：</span>
+                    {{item.productTitle}}
+                </li>
+                <li>
+                    <span class="pic-box-title">开始：
+                    </span>
+                    {{ (item.endTime -item.totalTime * 60 * 60 *1000 ) | dateFormat:'yyyy-MM-dd hh:mm:ss'}}
+                </li>
+                <li>
+                    <span class="pic-box-title">结束：</span>
+                    {{ item.endTime | dateFormat:'yyyy-MM-dd hh:mm:ss'}}
+                </li>
+                <li>
+                    <span class="pic-box-title">时长：</span>
+                    {{item.totalTime}}小时
+                </li>
+                <li>
+                    <span class="pic-box-title">剩余：</span>
+                    {{ timeResidue( item.endTime ) }}
+                    <!--正在进行的订单-->
+                    {{if item.orderState == 1 }}
+                    <!--自建订单-->
+                        {{ if item.orderType== 2 }}
+                            {{ if item.orderCdkState == 1 }}
+                            <button class="pic-btn-blue" id="goOn">续租</button>
+                            {{/if}}
+                        {{/if}}
+                    {{/if}}
+                </li>
+            </ul>
+        </div>
+        <div class="name-time">
+            <div class="nick-name text-limit">
+                别名：{{item.productNickName}}
+            </div>
+            {{ if item.timeStamp }}
+            <div class="time-stamp">
+                最后截图：{{ getDateDiff( item.timeStamp ) }}
+            </div>
+            {{ /if }}
+        </div>
+        <div class="pic-button-group">
+            <div class="pic-button-group-left">
+                <button class="pic-btn-white" id="lookPic">截图</button>
+                <button class="pic-btn-white" id="intercept">拦截</button>
+                <button class="pic-btn-white" id="history">历史</button>
+            </div>
+            <div class="pic-button-group-right">
+                <!--正在进行的订单-->
+                {{if item.orderState == 1 }}
+                    <!--自建订单-->
+                    {{ if item.orderType== 2 }}
+                        {{ if item.orderCdkState == 1 }}
+                            <button class="pic-btn-blue" id="closeOrder">锁卡</button>
+                            <button class="pic-btn-blue" id="stopOrder">停卡</button>
+                        {{else if item.orderCdkState == 3 }}
+                            <button class="pic-btn-blue" id="openOrder">解卡</button>
+                            <button class="pic-btn-blue" id="stopOrder">停卡</button>
+                        {{/if }}
+                    <!--平台订单-->
+                    {{else if item.orderType == 1 }}
+                        {{ if item.orderCdkState == 1 }}
+                            <button class="pic-btn-blue" id="closeOrder">锁卡</button>
+                            <button class="pic-btn-blue" id="stopOrder">停卡</button>
+                        {{else if item.orderCdkState == 3 }}
+                            <button class="pic-btn-blue" id="openOrder">解卡</button>
+                            <button class="pic-btn-blue" id="stopOrder">停卡</button>
+                        {{/if }}
+                        {{ if item.isBlack != 1 }}
+                            <button class="pic-btn-blue" id="toBlack">拉黑</button>
+                        {{/if }}
+                    {{/if }}
+                {{/if }}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+<!--续租-->
+<section class="pop-bg hide" id="goOnRent">
+    <div class="form-pop pop">
+        <div class="pop-title">
+            订单快速续租
+            <i class="iconfont icon-close"></i>
+        </div>
+        <div class="pop-info">
+            <div class="pop-info-item">
+                <span>订单加时（分钟为单位，负数表示扣时间）</span>
+                <input id="rentTime" type="text" placeholder="0">
+            </div>
+            <div class="pop-info-item">
+                <span>补交金额（无补交金额可不填）</span>
+                <input id="rentMoney" type="text" placeholder="0">
+            </div>
+            <div class="pop-info-item">
+                <span>本次续租号主是否享受分成</span>
+                <div id="enjoySharing" style="display: inline-block"></div>
+            </div>
+
+        </div>
+        <div class="pop-button-group clearBoth">
+            <button class="button-event-middle-gray fl cancel">取消</button>
+            <button class="button-event-middle-blue fr" id="goOnRentConfirm">确认</button>
+        </div>
+    </div>
+</section>
+<!--截图弹窗-->
+<section class="pop-bg hide" id="tradePictureTemplate">
+    <div class="message-pop pop">
+        <!--关闭按钮-->
+        <div class="pop-title">
+            截图
+            <i class="iconfont icon-close"></i>
+        </div>
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">所有截图</li>
+                <li>正常截图</li>
+                <li>危险截图</li>
+                <!--<a class="line"></a>-->
+            </ul>
+        </div>
+        <div class="template"></div>
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<!--截图内容-->
+<script id="pictureTemplate" type="text/html">
+    <div class="pic-box" id="lightgallery">
+        {{ if screenShotDtos.length !== 0 }}
+        {{each screenShotDtos as item i}}
+        <a href="{{item.screenShotUrl}}" data-sub-html="<h4>截图：{{ window.getDateDiff(item.timeStamp) }}</h4><p>订单号：{{ item.orderId }}- 时间：{{ window.getFullTimeEN(item.timeStamp)}} - {{ window.getDateDiff(item.timeStamp) }}</p>">
+            <img src="{{item.screenShotUrl}}?x-oss-process=image/resize,m_fixed,h_160,w_290"/>
+            <div class="img-info">{{ item.timeStamp | dateFormat:'yyyy-MM-dd hh:mm:ss' }}</div>
+        </a>
+        {{/each}}
+        {{ else}}
+            {{ window.$('.pop').getUndefined({text:'没有您需要的数据哦。'}) }}
+        {{/if}}
+    </div>
+</script>
+<!--拦截弹窗-->
+<section class="pop-bg hide" id="tradeDiaryTemplate">
+    <div class="message-pop pop">
+        <!--关闭按钮-->
+        <div class="pop-title">
+            监控日志
+            <i class="iconfont icon-close"></i>
+        </div>
+        <!--状态栏-->
+        <div class="status">
+            <ul>
+                <li class="active">进程或模块拦截</li>
+                <li>窗口拦截</li>
+                <li>进程行为拦截</li>
+                <li>操作行为拦截</li>
+                <li>PC端提示</li>
+                <!--<a class="line"></a>-->
+            </ul>
+        </div>
+        <div class="table-wrap">
+            <table class="table-main">
+                <thead id="thead">
+                <tr>
+                    <th>时间</th>
+                    <th>危险程度</th>
+                    <th>进程或模块名称</th>
+                    <th>游戏在线</th>
+                    <th>拦截结果</th>
+                </tr>
+                </thead>
+                <tbody class="template"></tbody>
+            </table>
+        </div>
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<!--拦截内容-->
+<script id="diaryTemplate" type="text/html">
+    {{  if pcProcesses.length !== 0 }}
+    {{each pcProcesses as item i}}
+    <tr>
+        <td>{{ item.timeStamp | dateFormat:'yyyy-MM-dd hh:mm:ss'}}</td>
+        {{ if item.type != 5 }}
+        {{if item.scanPositive < 6 }}
+        <td class="state-text-normal">安全</td>
+        {{ else if item.scanPositive <11}}
+        <td class="state-text-unknown">未知</td>
+        {{else}}
+        <td class="state-text-warm">危险</td>
+        {{/if}}
+        {{/if}}
+        <td>{{ item.cdk}}</td>
+        {{ if item.type != 5 }}
+        <td>
+            {{ if item.imagePath != '' }}
+            {{ lastString(item.imagePath)}}<i class="imgfont img-question" data-id="imagePathNotice" data-msg="{{ item.imagePath }}" data-note="{{item.note}}"></i>
+            {{ /if }}
+        </td>
+        {{ else }}
+        <td>{{ item.note }}</td>
+        {{/if}}
+        {{ if item.type != 5 }}
+        <td>
+            {{ if item.isOnline == 0 }}
+            不在线
+            {{ else if item.isOnline == 0 }}
+            在线
+            {{ /if }}
+        </td>
+        <td>
+            {{ if item.handleResult == 1 }}
+            拦截成功
+            {{ else if item.handleResult == 2 }}
+            放行
+            {{ else if item.handleResult == 3 }}
+            处理中
+            {{ /if}}
+        </td>
+        {{ /if}}
+    </tr>
+    {{/each}}
+    {{ else}}
+        {{ window.$('#tradeDiaryTemplate .pop').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{/if}}
+</script>
+<!--历史弹窗-->
+<section class="pop-bg hide" id="tradeHistoryTemplate">
+    <div class="message-pop pop">
+        <!--关闭按钮-->
+        <div class="pop-title">
+            历史记录
+            <i class="iconfont icon-close"></i>
+        </div>
+        <div class="table-wrap">
+            <table class="table-main">
+                <thead>
+                <tr>
+                    <th>历史上号记录ID</th>
+                    <th>订单编号</th>
+                    <th>登录IP</th>
+                    <th>登录时间</th>
+                    <th>是否冻结</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody class="template"></tbody>
+            </table>
+        </div>
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<!--历史内容-->
+<script id="historyTemplate" type="text/html">
+    {{if pcLoginHistories.length !== 0 }}
+    {{each pcLoginHistories as item i}}
+    <tr data-id="{{ item.historyId }}">
+        <td>{{ item.historyId }}</td>
+        <td>{{ item.orderId }}</td>
+        <td>{{ item.loginIp }}</td>
+        <td>{{ item.loginTime | dateFormat:'yyyy-MM-dd hh:mm:ss' }}</td>
+        <td>
+            {{ if item.isFreeze == 0 }}
+            未冻结
+            {{ else if item.isFreeze == 1 }}
+            已冻结
+            {{ /if }}
+        </td>
+        <td><button class="button-event-small-long-blue" id="sawDesktopFiles">查看桌面文件</button></td>
+    </tr>
+    {{/each}}
+    {{ else}}
+    {{ window.$('#tradeHistoryTemplate .pop').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{/if}}
+</script>
+<!--桌面文件弹窗-->
+<section class="pop-bg hide" id="tradeDeskTemplate" style="z-index: 6;">
+    <div class="message-pop pop">
+        <!--关闭按钮-->
+        <div class="pop-title">
+            历史记录
+            <i class="iconfont icon-close"></i>
+        </div>
+        <div class="table-wrap">
+            <table class="table-main">
+                <thead>
+                <tr>
+                    <th>文件名</th>
+                    <th>文件路径</th>
+                </tr>
+                </thead>
+                <tbody class="template"></tbody>
+            </table>
+        </div>
+        <div class="pop-pages"></div>
+    </div>
+</section>
+<!--500000729-->
+<!--桌面文件内容-->
+<!--<script id="deskTemplate" type="text/html">-->
+    <!--{{if destopFiles.length !== 0 }}-->
+    <!--{{each destopFiles as item i}}-->
+    <!--<tr data-id="{{ item.historyId }}">-->
+        <!--<td>{{ item.file }}</td>-->
+        <!--<td>{{ item.filePath }}</td>-->
+    <!--</tr>-->
+    <!--{{/each}}-->
+    <!--{{ else}}-->
+    <!--{{/if}}-->
+<!--</script>-->
+</body>
+</html>

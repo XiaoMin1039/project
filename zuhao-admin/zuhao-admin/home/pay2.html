@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/pay.css">
+</head>
+<body>
+<div class="header">
+    <div class="header-wrap">
+        <div class="header-opacity">
+            <ul>
+                <li><a href="">亲，请登录</a></li>
+                <li><a href="" class="text-red">免费注册</a></li>
+            </ul>
+        </div>
+        <div class="header-nav">
+            <ul>
+                <li class="header-hover">
+                    <span>我的个人中心<i class="iconfont icon-top"></i></span>
+                    <div class="header-nav-info">
+                        <img src="images/gray-zudahao.jpg" alt="">
+                        <a href="" class="">你好，请登录</a>
+                        <a href="" class="text-red"> 免费注册</a>
+                        <ul class="">
+                            <li><a href="">账户余额</a></li>
+                            <li><a href="">待处理订单</a></li>
+                            <li><a href="">我的购物卡</a></li>
+                            <li><a href="">我的收藏</a></li>
+                            <li><a href="">我的优惠券</a></li>
+                            <li><a href="">我的评价</a></li>
+                            <li><a href="">我的积分</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>|</li>
+                <li class="header-hover">
+                    <span>我的订单<i class="iconfont icon-top"></i></span>
+                    <div class="header-nav-info header-nav-info2">
+                        <ul class="">
+                            <li><a href="">账户余额</a></li>
+                            <li><a href="">待处理订单</a></li>
+                            <li><a href="">我的购物卡</a></li>
+                            <li><a href="">我的收藏</a></li>
+                            <li><a href="">我的优惠券</a></li>
+                            <li><a href="">我的评价</a></li>
+                            <li><a href="">我的积分</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>|</li>
+                <li><span><i class="img img-game"></i>发布闲置账号</span>
+                </li>
+                <li>|</li>
+                <li><span>帮助中心</span></li>
+                <li>|</li>
+                <li><span>新手快速入门</span></li>
+                <li>|</li>
+                <li><span>客户服务</span></li>
+                <li>|</li>
+                <li><span>关注我们</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="search clearBoth">
+    <div class="logo">
+        <a href="index.html" title="租大号-专业安全的游戏帐号出租买卖交易综合平台">
+            <img src="images/zudahao.png" alt="租大号">
+        </a>
+    </div>
+    <!--红色搜索框-->
+    <div class="search-box">
+        <div class="search-tab">
+            <ul class="search-tab-title">
+                <li class="active">账号搜索</li>
+                <li>店铺搜索</li>
+            </ul>
+            <div class="search-tab-box">
+                <div class="zizone active" style="position:relative;">
+                    <div data-id="gameTitle"><span data-id="gameMenuTitle">游戏名称</span><i class="img img-up"></i></div>
+                    <div data-id="gameTitle"><span data-id="gameMenuTitle">游戏区</span><i class="img img-up"></i></div>
+                    <div data-id="gameTitle"><span data-id="gameMenuTitle">游戏服务器</span><i class="img img-up"></i></div>
+                    <input type="text" placeholder="请输入装备或者皮肤名称">
+                    <div class="game-select" id="game-select" style="display: none;"></div>
+                </div>
+                <div class="shop">
+                    <input type="text" placeholder="请输入店铺名称">
+                </div>
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+        <div class="search-help">
+            <ul>
+                <li><a href=""> 绝地求生</a></li>
+                <li><a href=""> 守望先锋</a></li>
+                <li><a href=""> 枪神纪</a></li>
+                <li><a href=""> 穿越火线</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="nav clearBoth">
+    <div class="nav-wrap clearBoth">
+        <div class="banner-lists" id="bannerList">
+            <div id="bannerAllGame">所有游戏列表</div>
+            <ul class="game-lists">
+            </ul>
+        </div>
+        <div class="banner-change-nav">
+            <ul>
+                <li>选号大厅</li>
+                <li>明星店铺</li>
+                <li>全网热门主播<i class="img img-tophot"></i></li>
+                <li>商家入驻</li>
+                <li>帮助中心</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pay-body">
+    <div class="pay-progress">
+        <p class="progress-title-box">
+            <span class="pay-progress-title">账号信息确认</span>
+            <span class="pay-progress-title">核对订单信息并支付</span>
+            <span class="pay-progress-title">支付完成</span>
+        </p>
+        <div class="progress-box">
+            <span class="progress-circle">1</span>
+            <span class="progress-rectangle"></span>
+            <span class="progress-rectangle"></span>
+            <span class="progress-circle progress-circle-center">2</span>
+            <span class="progress-rectangle"></span>
+            <span class="progress-rectangle active"></span>
+            <span class="progress-circle active">3</span>
+        </div>
+    </div>
+    <div class="product-complete-box">
+        <div class="product-detail-box clearBoth">
+            <div class="pay-order fl"  id="tbody">
+            </div>
+            <div class="help-video-container fr">
+                <video src="birds.mp4" controls id="video" class="help-video"></video>
+                <img class="video-button" src="images/play.png" id="video-button">
+            </div>
+        </div>
+        <div class="load-help-box">
+            <p class="load-help-title">如何使用上号器？</p>
+            <ul class="load-help-detail">
+                <li class="load-help-item">
+                    <div class="load-help-step">1</div>
+                    <div class="load-help-content">
+                        <p class="load-help-content-profile">下载并安装上号器</p>
+                        <p class="load-help-relative">
+                            <a href="#">点击下载上号器</a>
+                            <a href="#">安装教程</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="load-help-item">
+                    <div class="load-help-step">2</div>
+                    <div class="load-help-content">
+                        <p class="load-help-content-profile">使用并登陆上号器</p>
+                        <p class="load-help-relative">
+                            <a href="#">通过激活码上号</a>
+                            <a href="#">通过会员账号密码上号</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="load-help-item">
+                    <div class="load-help-step">3</div>
+                    <div class="load-help-content">
+                        <p class="load-help-content-profile">通过上号器自动输入账号密码</p>
+                        <p class="load-help-relative">
+                            <a href="#">Steam上号教程</a>
+                            <a href="#">绝地求生详细教程</a>
+                            <a href="#">WeGame上号教程</a>
+                            <a href="#">腾讯游戏通用上号教程</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="load-help-item">
+                    <div class="load-help-step">4</div>
+                    <div class="load-help-content">
+                        <p class="load-help-content-profile">不能上号申请售后</p>
+                        <p class="load-help-relative">
+                            <a href="#">联系平台客服</a>
+                            <a href="#">订单如何申请售后</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/gameSelect.js"></script>
+<script src="js/template-function.js"></script>
+<script src="Interface/pay2.js"></script>
+<script type="text/html" id="tbodyTemplate">
+    {{ if orderDtos.length !== 0  }}
+    {{ each orderDtos as item i }}
+    <div class="order-msg">
+        <span>订单号：</span><span id="orderId">{{ item.orderId}}</span>
+    </div>
+    <div class="order-msg">
+        <span>产品标题：</span><a id="productTitle" target="_blank" href="">{{item.productTitle}}</a>
+    </div>
+    <div class="order-msg">
+        <span>角色名：</span><span id="roleName">{{ item.roleName}}</span>
+    </div>
+    <div class="order-msg">
+        <span>游戏区服：</span><span id="gameZone">{{ item.zoneName}}</span>
+    </div>
+    <div class="order-msg">
+        <span>解锁码：</span><span id="copyCode" class="unlock-key">{{item.orderCdk}}</span><span class="unlock-btn" id="copy">复制解锁码</span><span class="unlock-btn"><a href="/zudahao/down.html" target="_blank">上号器下载</a></span>
+    </div>
+    <div class="order-msg">
+        <span>押金：</span><span id="deposit">{{item.deposit}}元</span>
+    </div>
+    <div class="order-msg">
+        <span>租金：</span><span id="rental">{{item.hrental}}元</span>
+    </div>
+    <div class="order-msg">
+        <span>开始时间：</span><span id="startTime">{{ item.createTime | dateFormat:'yyyy-MM-dd hh:mm:ss'}}</span>
+    </div>
+    <div class="order-msg">
+        <span>结束时间：</span><span id="endTime">{{ item.endTime | dateFormat:'yyyy-MM-dd hh:mm:ss'}}</span>
+    </div>
+    {{ /each }}
+    {{ /if }}
+</script>
+</body>
+</html>

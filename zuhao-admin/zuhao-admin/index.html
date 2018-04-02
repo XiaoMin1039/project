@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <!--<link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">-->
+    <link href="http://zudahao.zudahao.com/agents2/css/base.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/index.css" rel="stylesheet">
+</head>
+<body>
+<header class="clearBoth">
+</header>
+<section class="wrap">
+    <nav class="nav"></nav>
+    <div class="main">
+        <!--店铺等级-->
+        <div class="shop-level shop-level1">
+            <span class="shop-name" id="shopName"></span>
+            <div class="level-number">
+                <i class="level-first number0"></i>
+                <i class="level-second"></i>
+            </div>
+        </div>
+        <!--<div class="shop-level shop-level2">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号2-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first  number1"></i>-->
+                <!--<i class="level-second  number2"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level3">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号3-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number2"></i>-->
+                <!--<i class="level-second number3"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level4">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号4-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number3"></i>-->
+                <!--<i class="level-second number4"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level5">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号5-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number4"></i>-->
+                <!--<i class="level-second number5"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level6">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号6-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number5"></i>-->
+                <!--<i class="level-second number6"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level7">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号7-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number6"></i>-->
+                <!--<i class="level-second number7"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level8">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号8-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number7"></i>-->
+                <!--<i class="level-second number8"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="shop-level shop-level9">-->
+            <!--<span class="shop-name">-->
+                <!--龙哥租号9-->
+            <!--</span>-->
+            <!--<div class="level-number">-->
+                <!--<i class="level-first number8"></i>-->
+                <!--<i class="level-second number9"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--进行中的订单-->
+        <div class="shop-data">
+            <ul>
+                <li>
+                    <a href="trade-manage.html" class="shop-data-num" id="rentingNum">0</a>
+                    <span class="shop-data-text">进行中的订单</span>
+                </li>
+                <li>
+                    <a  href="trade-diary.html" class="shop-data-num">0</a>
+                    <span class="shop-data-text">危险进程拦截</span>
+                </li>
+            </ul>
+        </div>
+        <!--四个框框-->
+        <div class="shop-info" id="tbody">
+            <div class="shop-info-item">
+                <div class="shop-info-item-title">
+                    店铺账号信息
+                </div>
+                <div class="shop-info-item-info">
+                    <span class="shop-state">已上架</span>
+                    <span class="state-num" id="groundingNum"></span>
+                    <span class="shop-state">账号审核中</span>
+                    <span class="state-num" id="audingNum"></span>
+                    <span class="shop-state">账号状态异常</span>
+                    <span class="state-num" id="stateErrorNum"></span>
+                </div>
+                <a href="product-publish.html" class="button-other"><i class="iconfont icon-add"></i> 发布新的账号</a>
+            </div>
+            <div class="shop-info-item">
+                <div class="shop-info-item-title">
+                    财务基本信息
+                </div>
+                <div class="shop-info-item-info">
+                    <span class="shop-state">账户可用余额</span>
+                    <span class="state-num" id="availableBailMoney"></span>
+                    <span class="shop-state">不可用余额</span>
+                    <span class="state-num" id="unavailableBailMoney"></span>
+                </div>
+                <a href="money-flow.html" class="button-other"><i class="iconfont icon-add"></i>查看店铺流水</a>
+            </div>
+            <div class="shop-info-item">
+                <div class="shop-info-item-title">
+                    昨日销售业绩
+                </div>
+                <div class="shop-info-item-info">
+                    <span class="shop-state">完成订单数量</span>
+                    <span class="state-num" id="finishNum"></span>
+                    <span class="shop-state">中途撤单</span>
+                    <span class="state-num" id="cancleNum"></span>
+                    <span class="shop-state">投诉订单</span>
+                    <span class="state-num" id="complainNum"></span>
+                    <span class="shop-state">总销售额</span>
+                    <span class="state-num" id="saleMoney"></span>
+                    <span class="shop-state">总销售利润</span>
+                    <span class="state-num" id="profitMoney"></span>
+                </div>
+            </div>
+            <div class="shop-info-item">
+                <div class="shop-info-item-title">
+                    今日销售业绩
+                </div>
+                <div class="shop-info-item-info">
+                    <span class="shop-state">完成订单数量</span>
+                    <span class="state-num" id="todayFinishNum"></span>
+                    <span class="shop-state">中途撤单</span>
+                    <span class="state-num" id="todayCancleNum"></span>
+                    <span class="shop-state">投诉订单</span>
+                    <span class="state-num" id="todayComplainNum"></span>
+                    <span class="shop-state">总销售额</span>
+                    <span class="state-num" id="todaySaleMoney"></span>
+                    <span class="shop-state">总销售利润</span>
+                    <span class="state-num" id="todayProfitMoney"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+</footer>
+
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/index.js"></script>
+
+
+
+</body>
+</html>

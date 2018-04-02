@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建订单</title>
+    <link href="http://zudahao.zudahao.com/agents2/css/public.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/product.css" rel="stylesheet">
+    <link href="http://zudahao.zudahao.com/agents2/css/product-order.css" rel="stylesheet">
+
+</head>
+<body>
+<header>
+</header>
+<section class="wrap">
+    <nav class="nav"></nav>
+    <div class="main">
+        <!--面包屑-->
+        <div class="main-title">
+            <span>后台</span> / <span>交易管理</span> / <span>创建订单</span>
+        </div>
+        <!--产品信息列表-->
+        <div id="tbody"></div>
+        <!--租赁表单-->
+        <div class="form hide">
+            <ul>
+                <li class="form-content">
+                    <span>* 租赁类型</span>
+                    <i class="imgfont img-question" id="rentTypeTip"></i>
+                    <div id="rentType" style="display: inline-block"></div>
+                </li>
+                <li class="form-content hide">
+                    <span>* 开始时间</span>
+                    <i class="imgfont img-notice" id="timeFrameSelectTip" data-id="popTip"></i>
+                    <input type="text" id="timeFrameSelect">
+                </li>
+                <li class="form-content">
+                    <span>* 租赁时长</span>
+                    <i class="imgfont img-question" id="order_time_tip"></i>
+                    <div class="time-length">
+                        <i id="btn-sub" class="reduce">-</i><input id="order_time" type="text" class="time-length-input" value="1"><i id="btn-add" class="increase">+</i>
+                    </div>
+                </li>
+                <li class="form-content">
+                    <span>* 免费赠送</span>
+                    <i class="imgfont img-question" id="postTimeTip" ></i>
+                    <div id="postTime" style="display: inline-block"></div>
+                </li>
+                <li class="form-content">
+                    <span>* 代理商分成设置</span>
+                    <i class="imgfont img-question"></i>
+                    <ul class="form-item-box">
+                        <li class="form-content-item">
+                            <span>实际收取客户金额</span>
+                            <i class="imgfont img-notice" id="realMoneyTip" data-id="popTip"></i>
+                            <input id="realMoney" type="text">
+                            <button class="button-event-small-blue" id="count">计算</button>
+                        </li>
+                        <li class="form-content-item">
+                            <span>代理商分成</span>
+                            <i class="imgfont img-question" id="gameAccountNotice"></i>
+                            <div id="rate" style="display:inline-block;"></div>
+                        </li>
+                        <li class="form-content-item">
+                            <span>签约分成结算</span>
+                            <i class="imgfont img-question" id="mathTip"></i>
+                            <div style="display: inline-block;width:382px;vertical-align: top;" id="math1" class="hide">
+                                <i id="mathTime" class="state-text-unknown">1小时</i>租金为
+                                <i id="shizu" class="state-text-unknown">1.00元</i>,实际收取客户金额
+                                <i id="mathRealMoney" class="state-text-unknown">1.00元</i>,商家分成比例:
+                                <i id="dailishangfenchengbili" class="state-text-unknown">100%</i>,号主获利
+                                <i class="state-text-unknown" id="haozhuhuoli">1.00元</i>,您获利
+                                <i class="state-text-unknown" id="dailishangfencheng">1.00元</i>。
+                            </div>
+                            <div style="display: inline-block"  id="math2" class="hide">
+                                号主获利<i class="state-text-unknown" id="ownerGet"></i>,您获利
+                                <i class="state-text-unknown" id="oneselfGet"></i>。
+                            </div>
+                            <div style="display: inline-block" id="notCount">
+                                <i class="state-text-unknown">未计算分成</i>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="form-content">
+                    <span>* 财务对账（选填）</span>
+                    <i class="imgfont img-question"></i>
+                    <div class="form-item-box">
+                        <div class="form-content-item">
+                            <span>订单来源方式</span>
+                            <i class="imgfont img-question"></i>
+                            <div id="source" class="borderAll">
+                                <div class="select_text"></div>
+                            </div>
+                        </div>
+                        <div class="form-content-item">
+                            <span>订单流水号码</span>
+                            <i class="imgfont img-question"></i>
+                            <input type="text" id="serializable">
+                        </div>
+                        <div class="form-content-item">
+                            <span>客户联系方式</span>
+                            <i class="imgfont img-question"></i>
+                            <div id="consumerLinkWay" class="borderAll">
+                                <div class="select_text"></div>
+                            </div>
+                        </div>
+                        <div class="form-content-item">
+                            <span>客户联系号码</span>
+                            <i class="imgfont img-question"></i>
+                            <input type="text" id="consumerLinkAccount">
+                        </div>
+                        <div class="form-content-item">
+                            <span>其他备注</span>
+                            <i class="imgfont img-question"></i>
+                            <input type="text" id="note">
+                        </div>
+                    </div>
+                </li>
+                <li class="form-content">
+                    <span></span>
+                    <i class="imgfont"></i>
+                    <ul class="form-item-box">
+                        <li class="form-content-item">
+                            温馨提示：财务对账表单内的客户信息,是后期全网黑名单申诉的唯一凭证,如您不填写,后期将无法申请租客的黑名单加入。
+                            <br>如果您是自建帐号,收取的客户金钱,和平台没有任何关系.这不会影响您的平台金额,包括给号主的分成也是需要您后期自行转款.表单的填写仅为您财务核对使用。
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+            <div class="button-group">
+                <button class="button-event-large-blue" id="createOrder">创建订单</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+</footer>
+<script src="http://zudahao.zudahao.com/agents2/js/jquery-3.2.1.min.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/someComponent.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/selected.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/laydate/laydate.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/setVerificationTip.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-web.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/template-function.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/ js/base.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/error.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/modifyPop.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/js/product-order.js"></script>
+<script src="http://zudahao.zudahao.com/agents2/Interface/product-order.js"></script>
+
+<!--产品信息-->
+<script id="tbodyTemplate" type="text/html">
+    {{if agentsProductDtos.length !== 0 }}
+    {{each agentsProductDtos as item i}}
+    <div class="product" data-id="{{item.productId }}">
+        <div class="product-item">
+            <div class="title state-normal">
+                <ul class="product-notice">
+                    <li>产品编号 {{item.productId}}</li>
+                </ul>
+            </div>
+            <ul class="product-item-info">
+                <li>
+                    <ul class="product-item-info-item">
+                        <li class="text-limit" title="{{ item.productTitle }}">{{ item.productTitle }}</li>
+                        <li>游戏大区：<span class="game-info">{{ item.ziZoneName }}</span></li>
+                        <li>账号类型：
+                            {{ if item.productType == 1 }}<span class="way-self">商家自建</span>
+                            {{ else if item.productType== 2 }}<span class="way-terrace">平台签约</span>
+                            {{ /if }}
+                        </li>
+                        <li>账号别名：{{ item.nickName }}</li>
+                        {{ if item.roleName }}
+                        <li>角色名称：{{ item.roleName }}</li>
+                        {{ /if }}
+                    </ul>
+                </li>
+                <li>
+                    <ul class="product-item-info-item">
+                        <li>时租：{{ item.adminHrental }}元</li>
+                        <li>包夜：{{ item.nrental }}元</li>
+                        <li>包天：{{ item.drental }}元</li>
+                        <li>押金：{{ item.deposit }}元/有条件免除</li>
+                        <li>分成：{{ item.rate }}%</li>
+                        <li>最低租赁时长：{{ item.miniHours }}小时</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="product-item-info-item">
+                        <li>出租次数：{{ item.totalTimes }}次</li>
+                        <li>出租小时：{{ item.totalTimeLength}}次</li>
+                        {{ if item.totalCollect }}
+                        <li>收藏次数：{{ item.doneViolation }}次</li>
+                        {{ /if }}
+                        <li>累计收益：{{item.totalMoney }}元</li>
+                        <li>商家累计获利：{{ window.parseFloat(item.totalMoney * item.rate / 100).toFixed(2) }}元</li>
+                        <li>号主累计获利：{{ window.parseFloat(item.totalMoney * item.ownerRate / 100).toFixed(2) }}元</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="product-item-info-item">
+                        <li>
+                            产品状态：
+                            {{if item.state == 1 }}正常可租
+                            {{else if item.state == 2 }}正常已租
+                            {{else if item.state == 3 }}待编辑
+                            {{else if item.state == 4 }}等待审核
+                            {{else if item.state == 5 }}下架
+                            {{ /if }}
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="product-item-info-item">
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+    {{ else }}
+    {{ window.$('.main').getUndefined({text:'没有您需要的数据哦。'}) }}
+    {{ /if }}
+</script>
+</body>
+</html>
